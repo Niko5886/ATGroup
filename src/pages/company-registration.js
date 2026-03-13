@@ -10,6 +10,7 @@ export function companyRegistrationPage() {
     ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
+    heroClass: "company-registration-hero",
     benefitsTitle: "Ключови Предимства",
     benefits: [
       "Експертна консултация за избор на правна форма",

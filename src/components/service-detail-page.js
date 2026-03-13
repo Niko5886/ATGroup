@@ -11,7 +11,8 @@ export function renderServiceDetailPage({
   benefitsTitle,
   benefits,
   processTitle,
-  steps
+  steps,
+  heroClass = ""
 }) {
   const benefitItems = benefits
     .map(
@@ -40,7 +41,7 @@ export function renderServiceDetailPage({
 
   return `
     <section class="service-detail-page">
-      <section class="service-detail-hero">
+      <section class="service-detail-hero ${heroClass}">
         <div class="service-detail-hero-main">
           ${renderServiceIcon(icon, "service-detail-icon")}
           <h1 class="service-detail-title">${title}</h1>

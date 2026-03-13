@@ -8,7 +8,7 @@ export function basicsPage() {
     </section>
 
     <section class="service-grid service-grid-3">
-      <article class="service-card service-card-blue service-card-clickable" data-card-link="/company-registration" tabindex="0" role="link" aria-label="Регистрация на фирми">
+      <article class="service-card service-card-blue service-card-clickable service-card-company-registration" data-card-link="/company-registration" tabindex="0" role="link" aria-label="Регистрация на фирми">
         ${renderServiceIcon("briefcase")}
         <h3>Регистрация на фирми</h3>
         <p>Пълни услуги по регистрация за всички видове правни субекти в България с експертно ръководство на всяка стъпка.</p>
