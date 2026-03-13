@@ -536,6 +536,130 @@ a {
   opacity: 0.9;
 }
 
+.service-card-vat-registration {
+  background:
+    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    url("../assets/images/%D0%B4%D0%B4%D1%81.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-vat-registration::before {
+  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.service-card-vat-registration > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-vat-registration h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+}
+
+.service-card-vat-registration p {
+  color: rgba(240, 247, 243, 0.92);
+}
+
+.service-card-vat-registration a {
+  border-top-color: rgba(238, 247, 242, 0.32);
+  color: #eff9f3;
+}
+
+.service-card-vat-registration a:hover,
+.service-card-vat-registration a:focus {
+  color: #ffffff;
+}
+
+.service-card-vat-registration .card-icon {
+  background: linear-gradient(145deg, rgba(237, 247, 242, 0.2), rgba(237, 247, 242, 0.08));
+  border-color: rgba(230, 241, 235, 0.4);
+}
+
+.service-card-vat-registration .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-vat-registration:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+}
+
+.service-card-vat-registration:hover::after {
+  opacity: 0.9;
+}
+
+.service-card-payroll-hr {
+  background:
+    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    url("../assets/images/%D0%A2%D0%A0%D0%97.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-payroll-hr::before {
+  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.service-card-payroll-hr > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-payroll-hr h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+}
+
+.service-card-payroll-hr p {
+  color: rgba(240, 247, 243, 0.92);
+}
+
+.service-card-payroll-hr a {
+  border-top-color: rgba(238, 247, 242, 0.32);
+  color: #eff9f3;
+}
+
+.service-card-payroll-hr a:hover,
+.service-card-payroll-hr a:focus {
+  color: #ffffff;
+}
+
+.service-card-payroll-hr .card-icon {
+  background: linear-gradient(145deg, rgba(237, 247, 242, 0.2), rgba(237, 247, 242, 0.08));
+  border-color: rgba(230, 241, 235, 0.4);
+}
+
+.service-card-payroll-hr .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-payroll-hr:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+}
+
+.service-card-payroll-hr:hover::after {
+  opacity: 0.9;
+}
+
 .audience-grid {
   display: grid;
   gap: 1.4rem;
@@ -716,6 +840,28 @@ a {
   max-width: 46rem;
 }
 
+.service-detail-back-link {
+  align-items: center;
+  color: rgba(243, 247, 255, 0.92);
+  display: inline-flex;
+  font-size: 0.94rem;
+  font-weight: 700;
+  gap: 0.45rem;
+  margin-bottom: 1.15rem;
+  text-decoration: none;
+}
+
+.service-detail-back-link::before {
+  content: "\2190";
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.service-detail-back-link:hover,
+.service-detail-back-link:focus {
+  color: #ffffff;
+}
+
 .service-detail-icon {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.14);
@@ -757,6 +903,332 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.34);
 }
 
+.service-detail-hero.vat-registration-hero {
+  background:
+    linear-gradient(125deg, rgba(20, 42, 33, 0.66), rgba(18, 37, 29, 0.72)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/%D0%B4%D0%B4%D1%81.jpg") center/cover no-repeat;
+}
+
+.service-detail-hero.payroll-hr-hero {
+  background:
+    linear-gradient(125deg, rgba(20, 42, 33, 0.66), rgba(18, 37, 29, 0.72)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/%D0%A2%D0%A0%D0%97.jpg") center/cover no-repeat;
+}
+
+.service-detail-hero.vat-registration-hero::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  opacity: 0.3;
+}
+
+.service-detail-hero.payroll-hr-hero::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  opacity: 0.3;
+}
+
+.service-detail-hero.vat-registration-hero::after {
+  background: linear-gradient(180deg, rgba(8, 19, 14, 0.08), rgba(8, 19, 14, 0.38));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.service-detail-hero.payroll-hr-hero::after {
+  background: linear-gradient(180deg, rgba(8, 19, 14, 0.08), rgba(8, 19, 14, 0.38));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.vat-registration-hero .service-detail-cta {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.payroll-hr-hero .service-detail-cta {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.vat-registration-hero .service-detail-cta-button {
+  background: #ffffff;
+  color: #264937;
+}
+
+.payroll-hr-hero .service-detail-cta-button {
+  background: #ffffff;
+  color: #264937;
+}
+
+.vat-registration-hero .service-detail-cta-button:hover,
+.vat-registration-hero .service-detail-cta-button:focus {
+  color: #1c382a;
+}
+
+.payroll-hr-hero .service-detail-cta-button:hover,
+.payroll-hr-hero .service-detail-cta-button:focus {
+  color: #1c382a;
+}
+
+.service-detail-body.vat-registration-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.vat-registration-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.vat-registration-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.vat-registration-body .detail-process-column {
+  grid-area: process;
+}
+
+.vat-registration-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.vat-registration-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.vat-registration-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B71.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.vat-registration-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.vat-registration-body .service-detail-process-media::before {
+  background-image: url("../assets/images/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B72.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.vat-registration-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.vat-registration-body .detail-process-column,
+.vat-registration-body .service-detail-benefits-media,
+.vat-registration-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.vat-registration-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.service-detail-body.payroll-hr-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.payroll-hr-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.payroll-hr-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.payroll-hr-body .detail-process-column {
+  grid-area: process;
+}
+
+.payroll-hr-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.payroll-hr-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.payroll-hr-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.payroll-hr-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.payroll-hr-body .service-detail-process-media::before {
+  background-image: url("../assets/images/%D0%BE%D1%84%D0%BE%D1%80%D0%BC%D1%8F%D0%BD%D0%B5%20%D0%B4%D0%BE%D0%BA.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.payroll-hr-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.payroll-hr-body .detail-process-column,
+.payroll-hr-body .service-detail-benefits-media,
+.payroll-hr-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.payroll-hr-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.vat-registration-body .detail-block-title {
+  color: #20362b;
+}
+
+.payroll-hr-body .detail-block-title {
+  color: #20362b;
+}
+
+.vat-registration-body .detail-block-title::before {
+  background: linear-gradient(90deg, var(--accent-gold), #b1935a);
+}
+
+.payroll-hr-body .detail-block-title::before {
+  background: linear-gradient(90deg, var(--accent-gold), #b1935a);
+}
+
+.vat-registration-body .detail-benefit-item {
+  background: #ffffff;
+  border-color: rgba(47, 107, 79, 0.12);
+}
+
+.payroll-hr-body .detail-benefit-item {
+  background: #ffffff;
+  border-color: rgba(47, 107, 79, 0.12);
+}
+
+.vat-registration-body .detail-benefit-item span:last-child {
+  color: #314d3e;
+}
+
+.payroll-hr-body .detail-benefit-item span:last-child {
+  color: #314d3e;
+}
+
+.vat-registration-body .detail-benefit-check,
+.vat-registration-body .detail-benefit-check::after {
+  border-color: #cf8f49;
+}
+
+.payroll-hr-body .detail-benefit-check,
+.payroll-hr-body .detail-benefit-check::after {
+  border-color: #cf8f49;
+}
+
+.vat-registration-body .detail-step-item:not(:last-child)::after {
+  background: linear-gradient(180deg, rgba(201, 169, 106, 0.55), rgba(47, 107, 79, 0.2));
+}
+
+.payroll-hr-body .detail-step-item:not(:last-child)::after {
+  background: linear-gradient(180deg, rgba(201, 169, 106, 0.55), rgba(47, 107, 79, 0.2));
+}
+
+.vat-registration-body .detail-step-number {
+  background: #ffffff;
+  border-color: #cf8f49;
+  color: #284a39;
+}
+
+.payroll-hr-body .detail-step-number {
+  background: #ffffff;
+  border-color: #cf8f49;
+  color: #284a39;
+}
+
+.vat-registration-body .detail-step-copy h3 {
+  color: #20362b;
+}
+
+.payroll-hr-body .detail-step-copy h3 {
+  color: #20362b;
+}
+
+.vat-registration-body .detail-step-copy p {
+  color: #5a6d62;
+}
+
+.payroll-hr-body .detail-step-copy p {
+  color: #5a6d62;
+}
+
 .service-detail-cta h2 {
   color: #ffffff;
   font-size: 1.5rem;
@@ -794,6 +1266,95 @@ a {
   gap: 2rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   padding: 2rem;
+}
+
+.service-detail-benefits-media {
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  display: none;
+  min-height: 20rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.service-detail-process-media {
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  display: none;
+  min-height: 20rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.company-registration-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.company-registration-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.company-registration-body .detail-process-column {
+  grid-area: process;
+}
+
+.company-registration-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+}
+
+.company-registration-body .service-detail-benefits-media::before,
+.company-registration-body .service-detail-process-media::before {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.company-registration-body .service-detail-benefits-media::after,
+.company-registration-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.company-registration-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/%D0%BA%D0%BB%D1%8E%D1%87%D0%BE%D0%B2%D0%B8%20%D0%BF%D1%80%D0%B5%D0%B4%D0%B8%D0%BC%D1%81%D1%82%D0%B2%D0%B0.jpg");
+}
+
+.company-registration-body .detail-process-column,
+.company-registration-body .service-detail-benefits-media,
+.company-registration-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.company-registration-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  min-height: 21rem;
+  padding: 1.2rem;
+}
+
+.company-registration-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+}
+
+.company-registration-body .service-detail-process-media::before {
+  background-image: url("../assets/images/%D0%BD%D0%B0%D1%88%D0%B8%D1%8F%D1%82%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81.jpg");
+  background-position: center 44%;
 }
 
 .detail-block-title {
@@ -1162,6 +1723,51 @@ a {
   .service-detail-hero,
   .service-detail-body {
     padding: 1.4rem;
+  }
+
+  .company-registration-body {
+    grid-template-areas:
+      "benefits"
+      "media"
+      "process-media"
+      "process";
+    row-gap: 1.5rem;
+  }
+
+  .company-registration-body .service-detail-benefits-media,
+  .company-registration-body .detail-process-column,
+  .company-registration-body .service-detail-process-media {
+    min-height: 16rem;
+  }
+
+  .vat-registration-body {
+    grid-template-areas:
+      "benefits"
+      "media"
+      "process-media"
+      "process";
+    row-gap: 1.5rem;
+  }
+
+  .vat-registration-body .service-detail-benefits-media,
+  .vat-registration-body .service-detail-process-media,
+  .vat-registration-body .detail-process-column {
+    min-height: 16rem;
+  }
+
+  .payroll-hr-body {
+    grid-template-areas:
+      "benefits"
+      "media"
+      "process-media"
+      "process";
+    row-gap: 1.5rem;
+  }
+
+  .payroll-hr-body .service-detail-benefits-media,
+  .payroll-hr-body .service-detail-process-media,
+  .payroll-hr-body .detail-process-column {
+    min-height: 16rem;
   }
 
   .detail-block-title {

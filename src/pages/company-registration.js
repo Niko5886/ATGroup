@@ -11,6 +11,9 @@ export function companyRegistrationPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     heroClass: "company-registration-hero",
+    bodyClass: "company-registration-body",
+    showBenefitsImage: true,
+    showProcessImage: true,
     benefitsTitle: "Ключови Предимства",
     benefits: [
       "Експертна консултация за избор на правна форма",

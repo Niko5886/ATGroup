@@ -7,7 +7,9 @@ const navItems = [
 
 export function renderNavbar(activePath) {
   const normalizedPath = activePath === "/" ? "/home" : activePath;
-  const navActivePath = normalizedPath === "/company-registration" ? "/basics" : normalizedPath;
+  const navActivePath = ["/company-registration", "/vat-registration", "/payroll-hr"].includes(normalizedPath)
+    ? "/basics"
+    : normalizedPath;
 
   const links = navItems
     .map(({ label, href, homeHref }) => {

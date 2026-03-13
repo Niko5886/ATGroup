@@ -5,6 +5,8 @@ import { growthPage } from "../pages/growth.js";
 import { futurePage } from "../pages/future.js";
 import { contactsPage } from "../pages/contacts.js";
 import { companyRegistrationPage } from "../pages/company-registration.js";
+import { vatRegistrationPage } from "../pages/vat-registration.js";
+import { payrollHrPage } from "../pages/payroll-hr.js";
 
 const routes = {
   "/": homePage,
@@ -13,7 +15,9 @@ const routes = {
   "/growth": growthPage,
   "/future": futurePage,
   "/contacts": contactsPage,
-  "/company-registration": companyRegistrationPage
+  "/company-registration": companyRegistrationPage,
+  "/vat-registration": vatRegistrationPage,
+  "/payroll-hr": payrollHrPage
 };
 
 function resolvePathname(pathname) {

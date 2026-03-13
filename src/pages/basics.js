@@ -15,18 +15,18 @@ export function basicsPage() {
         <a href="/company-registration" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card service-card-blue">
+      <article class="service-card service-card-blue service-card-clickable service-card-vat-registration" data-card-link="/vat-registration" tabindex="0" role="link" aria-label="ДДС Регистрация">
         ${renderServiceIcon("receipt")}
         <h3>ДДС Регистрация</h3>
         <p>Безпроблемна ДДС регистрация и управление на съответствието, за да гарантирате, че вашият бизнес отговаря на всички регулаторни изисквания.</p>
-        <a href="/contacts" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
+        <a href="/vat-registration" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card service-card-blue">
+      <article class="service-card service-card-blue service-card-clickable service-card-payroll-hr" data-card-link="/payroll-hr" tabindex="0" role="link" aria-label="ТРЗ и Личен състав">
         ${renderServiceIcon("people")}
         <h3>ТРЗ и Личен състав</h3>
         <p>Цялостна обработка на заплати, изчисляване на възнаграждения и администриране на персонала с прецизност.</p>
-        <a href="/contacts" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
+        <a href="/payroll-hr" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
       </article>
     </section>
   `;

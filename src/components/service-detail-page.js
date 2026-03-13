@@ -8,11 +8,16 @@ export function renderServiceDetailPage({
   ctaText,
   ctaHref,
   ctaLabel,
+  backHref = "",
+  backLabel = "",
   benefitsTitle,
   benefits,
   processTitle,
   steps,
-  heroClass = ""
+  heroClass = "",
+  bodyClass = "",
+  showBenefitsImage = false,
+  showProcessImage = false
 }) {
   const benefitItems = benefits
     .map(
@@ -39,10 +44,22 @@ export function renderServiceDetailPage({
     )
     .join("");
 
+  const detailBodyClass = `service-detail-body ${bodyClass}`.trim();
+  const backLinkMarkup = backHref && backLabel
+    ? `<a class="service-detail-back-link" href="${backHref}" data-link>${backLabel}</a>`
+    : "";
+  const benefitsImagePanel = showBenefitsImage
+    ? '<div class="service-detail-benefits-media" aria-hidden="true"></div>'
+    : "";
+  const processImagePanel = showProcessImage
+    ? '<div class="service-detail-process-media" aria-hidden="true"></div>'
+    : "";
+
   return `
     <section class="service-detail-page">
       <section class="service-detail-hero ${heroClass}">
         <div class="service-detail-hero-main">
+          ${backLinkMarkup}
           ${renderServiceIcon(icon, "service-detail-icon")}
           <h1 class="service-detail-title">${title}</h1>
           <p class="service-detail-description">${description}</p>
@@ -55,16 +72,20 @@ export function renderServiceDetailPage({
         </aside>
       </section>
 
-      <section class="service-detail-body">
-        <div class="service-detail-column">
+      <section class="${detailBodyClass}">
+        <div class="service-detail-column detail-benefits-column">
           <h2 class="detail-block-title">${benefitsTitle}</h2>
           <ul class="detail-benefit-list">${benefitItems}</ul>
         </div>
 
-        <div class="service-detail-column">
+        ${benefitsImagePanel}
+
+        <div class="service-detail-column detail-process-column">
           <h2 class="detail-block-title">${processTitle}</h2>
           <ol class="detail-step-list">${processItems}</ol>
         </div>
+
+        ${processImagePanel}
       </section>
     </section>
   `;
