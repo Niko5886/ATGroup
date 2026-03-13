@@ -1,0 +1,70 @@
+const navItems = [
+  { label: "Начало", href: "/home", homeHref: "/home#home-top" },
+  { label: "Основи", href: "/basics", homeHref: "/home#basics" },
+  { label: "Растеж", href: "/growth", homeHref: "/home#growth" },
+  { label: "Бъдеще", href: "/future", homeHref: "/home#future" }
+];
+
+export function renderNavbar(activePath) {
+  const normalizedPath = activePath === "/" ? "/home" : activePath;
+  const navActivePath = normalizedPath === "/company-registration" ? "/basics" : normalizedPath;
+
+  const links = navItems
+    .map(({ label, href, homeHref }) => {
+      const isActive = navActivePath === href;
+      const targetHref = normalizedPath === "/home" ? homeHref : href;
+      const homeSection = homeHref.split("#")[1] || "home-top";
+      return `
+        <li class="nav-item">
+          <a
+            class="nav-link at-nav-link ${isActive ? "is-active" : ""}"
+            href="${targetHref}"
+            data-home-section="${homeSection}"
+            data-link
+          >
+            ${label}
+          </a>
+        </li>
+      `;
+    })
+    .join("");
+
+  return `
+    <header class="site-header mb-4">
+      <nav class="navbar navbar-expand-lg at-navbar">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand at-brand" href="/home" data-link>
+            <span class="at-brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 120 120" focusable="false">
+                <path d="M60 8l6 20 20 6-20 6-6 20-6-20-20-6 20-6z"></path>
+                <path d="M82 58l3 10 10 3-10 3-3 10-3-10-10-3 10-3z"></path>
+                <path d="M37 59l2 7 7 2-7 2-2 7-2-7-7-2 7-2z"></path>
+              </svg>
+            </span>
+            <span>AT Group</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Превключи навигацията"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2 at-nav-list">
+              <span class="nav-indicator" aria-hidden="true"></span>
+              ${links}
+              <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+                <a class="btn at-cta" href="${normalizedPath === "/home" ? "/home#contacts" : "/contacts"}" data-home-section="contacts" data-link>Контакт</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+  `;
+}
