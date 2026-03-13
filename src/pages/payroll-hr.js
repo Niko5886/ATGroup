@@ -11,7 +11,7 @@ export function payrollHrPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "payroll-hr-hero",
     bodyClass: "payroll-hr-body",
     showBenefitsImage: true,

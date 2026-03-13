@@ -11,7 +11,7 @@ export function vatRegistrationPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "vat-registration-hero",
     bodyClass: "vat-registration-body",
     showBenefitsImage: true,

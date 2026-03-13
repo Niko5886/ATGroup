@@ -28,6 +28,26 @@ export function basicsPage() {
         <p>Цялостна обработка на заплати, изчисляване на възнаграждения и администриране на персонала с прецизност.</p>
         <a href="/payroll-hr" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
       </article>
+
+      <article class="service-card service-card-blue service-card-clickable service-card-accounting" data-card-link="/accounting" tabindex="0" role="link" aria-label="Счетоводство">
+        ${renderServiceIcon("book")}
+        <h3>Счетоводство</h3>
+        <p>Професионални счетоводни услуги и водене на финансови регистри за поддържане на точни фирмени финанси.</p>
+        <a href="/accounting" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
+      </article>
+
+      <article class="service-card service-card-blue service-card-clickable service-card-eu-projects" data-card-link="/eu-projects" tabindex="0" role="link" aria-label="Консултации по Европроекти">
+        ${renderServiceIcon("briefcase")}
+        <h3>Консултации по Европроекти</h3>
+        <p>Експертни насоки за осигуряване и управление на възможности за финансиране от Европейския съюз за растежа на вашия бизнес.</p>
+        <a href="/eu-projects" data-link>НАУЧЕТЕ ПОВЕЧЕ</a>
+      </article>
+
+      <article class="service-card service-card-blue service-card-coming-soon">
+        ${renderServiceIcon("rocket")}
+        <h3>Нова Услуга</h3>
+        <span class="service-card-coming-soon-label">ОЧАКВАЙТЕ СКОРО</span>
+      </article>
     </section>
   `;
 }

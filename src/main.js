@@ -4,6 +4,7 @@ import "./styles/main.css";
 import { navigateTo, renderRoute, scrollToCurrentHash } from "./app/router.js";
 
 let revealObserver;
+let triggerObserver;
 let sectionSpyObserver;
 let lastSyncedHomeSection;
 let lastScrollY = window.scrollY;
@@ -160,38 +161,68 @@ function initHomeSectionSpy() {
 
 function initScrollReveal() {
   const revealElements = document.querySelectorAll(".reveal-on-scroll");
+  const triggerElements = document.querySelectorAll(".trigger-on-view");
 
   if (revealObserver) {
     revealObserver.disconnect();
   }
 
-  if (!revealElements.length) {
+  if (triggerObserver) {
+    triggerObserver.disconnect();
+  }
+
+  if (!revealElements.length && !triggerElements.length) {
     return;
   }
 
   if (!window.IntersectionObserver) {
     revealElements.forEach((element) => element.classList.add("is-visible"));
+    triggerElements.forEach((element) => element.classList.add("is-visible"));
     return;
   }
 
-  revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
+  if (revealElements.length) {
+    revealObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
 
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      });
-    },
-    {
-      rootMargin: "0px 0px -8% 0px",
-      threshold: 0.2
-    }
-  );
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        rootMargin: "0px 0px -8% 0px",
+        threshold: 0.2
+      }
+    );
 
-  revealElements.forEach((element) => revealObserver.observe(element));
+    revealElements.forEach((element) => revealObserver.observe(element));
+  }
+
+  if (triggerElements.length) {
+    triggerObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        });
+      },
+      {
+        // Trigger late: the block must reach the lower-middle viewport zone first.
+        rootMargin: "0px 0px -45% 0px",
+        threshold: 0
+      }
+    );
+
+    triggerElements.forEach((element) => triggerObserver.observe(element));
+  }
 }
 
 function renderCurrentPath() {

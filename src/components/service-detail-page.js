@@ -22,7 +22,7 @@ export function renderServiceDetailPage({
   const benefitItems = benefits
     .map(
       (benefit, index) => `
-        <li class="detail-benefit-item" style="--benefit-index: ${index};">
+        <li class="detail-benefit-item" style="--benefit-index: ${index};" tabindex="0">
           <span class="detail-benefit-check" aria-hidden="true"></span>
           <span>${benefit}</span>
         </li>
@@ -33,7 +33,7 @@ export function renderServiceDetailPage({
   const processItems = steps
     .map(
       (step, index) => `
-        <li class="detail-step-item">
+        <li class="detail-step-item" style="--step-index: ${index};">
           <span class="detail-step-number">${index + 1}</span>
           <div class="detail-step-copy">
             <h3>${step.title}</h3>
@@ -46,7 +46,7 @@ export function renderServiceDetailPage({
 
   const detailBodyClass = `service-detail-body ${bodyClass}`.trim();
   const backLinkMarkup = backHref && backLabel
-    ? `<a class="service-detail-back-link" href="${backHref}" data-link>${backLabel}</a>`
+    ? `<a class="service-detail-back-link" href="${backHref}" data-link><span class="service-detail-back-arrow" aria-hidden="true">\u2190</span><span class="service-detail-back-text">${backLabel}</span></a>`
     : "";
   const benefitsImagePanel = showBenefitsImage
     ? '<div class="service-detail-benefits-media" aria-hidden="true"></div>'
@@ -80,7 +80,7 @@ export function renderServiceDetailPage({
 
         ${benefitsImagePanel}
 
-        <div class="service-detail-column detail-process-column">
+        <div class="service-detail-column detail-process-column trigger-on-view">
           <h2 class="detail-block-title">${processTitle}</h2>
           <ol class="detail-step-list">${processItems}</ol>
         </div>

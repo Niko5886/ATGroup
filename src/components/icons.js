@@ -20,6 +20,13 @@ const SERVICE_ICONS = {
       <path d="M18 18a4 4 0 0 0-2-3.5"></path>
     </svg>
   `,
+  book: `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M5 5.5A2.5 2.5 0 0 1 7.5 3H19v16H7.5A2.5 2.5 0 0 0 5 21.5z"></path>
+      <path d="M5 5.5v16"></path>
+      <path d="M9 7h6M9 10h6"></path>
+    </svg>
+  `,
   cloud: `
     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
       <path d="M8.5 18a5.5 5.5 0 1 1 1.2-10.87A6.5 6.5 0 0 1 20 11.5a4.5 4.5 0 0 1-1.5 8.74z"></path>

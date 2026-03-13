@@ -12,6 +12,52 @@
   --primary-soft: #6faf8f;
   --accent-gold: #c9a96a;
   --accent-gold-soft: #e7d5b2;
+  --benefit-ring: #cf8f49;
+  --benefit-ring-soft: #e8c393;
+  --benefit-ring-glow: rgba(207, 143, 73, 0.28);
+  --benefit-check-enter-duration: 0.36s;
+  --benefit-check-mark-duration: 0.24s;
+  --benefit-pulse-duration: 0.9s;
+  --benefit-check-shadow-y: 6px;
+  --benefit-check-shadow-blur: 12px;
+  --benefit-check-shadow-alpha: 0.08;
+  --benefit-focus-ring-alpha: 0.24;
+}
+
+body.benefit-effect-soft {
+  --benefit-check-enter-duration: 0.32s;
+  --benefit-check-mark-duration: 0.22s;
+  --benefit-pulse-duration: 0.72s;
+  --benefit-check-shadow-y: 4px;
+  --benefit-check-shadow-blur: 10px;
+  --benefit-check-shadow-alpha: 0.06;
+  --benefit-focus-ring-alpha: 0.2;
+}
+
+body.benefit-effect-soft .detail-benefit-check {
+  animation-name: benefit-check-enter-soft;
+}
+
+body.benefit-effect-soft .detail-benefit-check::before {
+  animation-name: benefit-check-pulse-soft;
+}
+
+body.benefit-effect-accented {
+  --benefit-check-enter-duration: 0.42s;
+  --benefit-check-mark-duration: 0.28s;
+  --benefit-pulse-duration: 1.04s;
+  --benefit-check-shadow-y: 8px;
+  --benefit-check-shadow-blur: 16px;
+  --benefit-check-shadow-alpha: 0.11;
+  --benefit-focus-ring-alpha: 0.28;
+}
+
+body.benefit-effect-accented .detail-benefit-check {
+  animation-name: benefit-check-enter-accented;
+}
+
+body.benefit-effect-accented .detail-benefit-check::before {
+  animation-name: benefit-check-pulse-accented;
 }
 
 * {
@@ -474,6 +520,67 @@ a {
   background: linear-gradient(160deg, #fffdf6, #edf7f1);
 }
 
+.service-card-coming-soon {
+  background:
+    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    url("../assets/images/productiv.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-coming-soon::before {
+  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.service-card-coming-soon > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-coming-soon h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+}
+
+.service-card-coming-soon p {
+  color: rgba(240, 247, 243, 0.82);
+}
+
+.service-card-coming-soon .card-icon {
+  background: linear-gradient(145deg, rgba(237, 247, 242, 0.2), rgba(237, 247, 242, 0.08));
+  border-color: rgba(230, 241, 235, 0.4);
+}
+
+.service-card-coming-soon .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-coming-soon:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+}
+
+.service-card-coming-soon-label {
+  border-top: 1px solid rgba(238, 247, 242, 0.32);
+  color: rgba(239, 249, 243, 0.65);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-top: auto;
+  padding-top: 1rem;
+  display: block;
+  cursor: default;
+  font-style: italic;
+}
+
 .service-card-company-registration {
   background:
     linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
@@ -657,6 +764,130 @@ a {
 }
 
 .service-card-payroll-hr:hover::after {
+  opacity: 0.9;
+}
+
+.service-card-accounting {
+  background:
+    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    url("../assets/images/%D0%BF%D1%80%D0%BE%D1%84.%D1%81%D1%87%D0%B5%D1%82.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-accounting::before {
+  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.service-card-accounting > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-accounting h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+}
+
+.service-card-accounting p {
+  color: rgba(240, 247, 243, 0.92);
+}
+
+.service-card-accounting a {
+  border-top-color: rgba(238, 247, 242, 0.32);
+  color: #eff9f3;
+}
+
+.service-card-accounting a:hover,
+.service-card-accounting a:focus {
+  color: #ffffff;
+}
+
+.service-card-accounting .card-icon {
+  background: linear-gradient(145deg, rgba(237, 247, 242, 0.2), rgba(237, 247, 242, 0.08));
+  border-color: rgba(230, 241, 235, 0.4);
+}
+
+.service-card-accounting .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-accounting:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+}
+
+.service-card-accounting:hover::after {
+  opacity: 0.9;
+}
+
+.service-card-eu-projects {
+  background:
+    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 82% 18%, rgba(218, 182, 119, 0.26), transparent 52%),
+    url("../assets/images/%D0%BA%D0%BE%D0%BD%D1%81%D0%95%D0%B2%D1%80%D0%BE%D0%9F%D1%80.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  color: #f4f8ff;
+  overflow: hidden;
+}
+
+.service-card-eu-projects::before {
+  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+}
+
+.service-card-eu-projects > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-eu-projects h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+}
+
+.service-card-eu-projects p {
+  color: rgba(235, 243, 255, 0.94);
+}
+
+.service-card-eu-projects a {
+  border-top-color: rgba(222, 236, 255, 0.36);
+  color: #edf6ff;
+}
+
+.service-card-eu-projects a:hover,
+.service-card-eu-projects a:focus {
+  color: #ffffff;
+}
+
+.service-card-eu-projects .card-icon {
+  background: linear-gradient(145deg, rgba(237, 246, 255, 0.2), rgba(237, 246, 255, 0.08));
+  border-color: rgba(219, 233, 250, 0.44);
+}
+
+.service-card-eu-projects .card-icon svg {
+  stroke: #eef6ff;
+}
+
+.service-card-eu-projects:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+}
+
+.service-card-eu-projects:hover::after {
   opacity: 0.9;
 }
 
@@ -851,8 +1082,12 @@ a {
   text-decoration: none;
 }
 
-.service-detail-back-link::before {
-  content: "\2190";
+.service-detail-back-link::before,
+.service-detail-back-link::after {
+  content: none !important;
+}
+
+.service-detail-back-arrow {
   font-size: 1rem;
   line-height: 1;
 }
@@ -917,6 +1152,20 @@ a {
     url("../assets/images/%D0%A2%D0%A0%D0%97.jpg") center/cover no-repeat;
 }
 
+.service-detail-hero.accounting-hero {
+  background:
+    linear-gradient(125deg, rgba(20, 42, 33, 0.66), rgba(18, 37, 29, 0.72)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/%D0%BF%D1%80%D0%BE%D1%84.%D1%81%D1%87%D0%B5%D1%82.jpg") center/cover no-repeat;
+}
+
+.service-detail-hero.eu-projects-hero {
+  background:
+    linear-gradient(125deg, rgba(20, 42, 33, 0.66), rgba(18, 37, 29, 0.72)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/%D0%BA%D0%BE%D0%BD%D1%81%D0%95%D0%B2%D1%80%D0%BE%D0%9F%D1%80.jpg") center/cover no-repeat;
+}
+
 .service-detail-hero.vat-registration-hero::before {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -925,6 +1174,20 @@ a {
 }
 
 .service-detail-hero.payroll-hr-hero::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  opacity: 0.3;
+}
+
+.service-detail-hero.accounting-hero::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  opacity: 0.3;
+}
+
+.service-detail-hero.eu-projects-hero::before {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
@@ -947,6 +1210,22 @@ a {
   position: absolute;
 }
 
+.service-detail-hero.accounting-hero::after {
+  background: linear-gradient(180deg, rgba(8, 19, 14, 0.08), rgba(8, 19, 14, 0.38));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.service-detail-hero.eu-projects-hero::after {
+  background: linear-gradient(180deg, rgba(8, 19, 14, 0.08), rgba(8, 19, 14, 0.38));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
 .vat-registration-hero .service-detail-cta {
   backdrop-filter: blur(8px);
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
@@ -954,6 +1233,18 @@ a {
 }
 
 .payroll-hr-hero .service-detail-cta {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.accounting-hero .service-detail-cta {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.eu-projects-hero .service-detail-cta {
   backdrop-filter: blur(8px);
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
   border: 1px solid rgba(255, 255, 255, 0.34);
@@ -969,6 +1260,16 @@ a {
   color: #264937;
 }
 
+.accounting-hero .service-detail-cta-button {
+  background: #ffffff;
+  color: #264937;
+}
+
+.eu-projects-hero .service-detail-cta-button {
+  background: #ffffff;
+  color: #264937;
+}
+
 .vat-registration-hero .service-detail-cta-button:hover,
 .vat-registration-hero .service-detail-cta-button:focus {
   color: #1c382a;
@@ -976,6 +1277,16 @@ a {
 
 .payroll-hr-hero .service-detail-cta-button:hover,
 .payroll-hr-hero .service-detail-cta-button:focus {
+  color: #1c382a;
+}
+
+.accounting-hero .service-detail-cta-button:hover,
+.accounting-hero .service-detail-cta-button:focus {
+  color: #1c382a;
+}
+
+.eu-projects-hero .service-detail-cta-button:hover,
+.eu-projects-hero .service-detail-cta-button:focus {
   color: #1c382a;
 }
 
@@ -1069,6 +1380,176 @@ a {
   border-color: rgba(47, 107, 79, 0.14);
 }
 
+.service-detail-body.accounting-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.service-detail-body.eu-projects-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.eu-projects-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.eu-projects-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.eu-projects-body .detail-process-column {
+  grid-area: process;
+}
+
+.eu-projects-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.eu-projects-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.eu-projects-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/%D0%B5%D0%B2%D1%80%D0%BE1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.eu-projects-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.eu-projects-body .service-detail-process-media::before {
+  background-image: url("../assets/images/%D0%B5%D0%B2%D1%80%D0%BE2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.eu-projects-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.eu-projects-body .detail-process-column,
+.eu-projects-body .service-detail-benefits-media,
+.eu-projects-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.eu-projects-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.accounting-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.accounting-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.accounting-body .detail-process-column {
+  grid-area: process;
+}
+
+.accounting-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.accounting-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.accounting-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/%D1%81%D1%87%D0%B5%D1%82%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.accounting-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.accounting-body .service-detail-process-media::before {
+  background-image: url("../assets/images/%D0%BF%D1%80%D0%B8%D0%B5%D0%BC2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.accounting-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.accounting-body .detail-process-column,
+.accounting-body .service-detail-benefits-media,
+.accounting-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.accounting-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
 .payroll-hr-body {
   grid-template-areas:
     "benefits media"
@@ -1157,11 +1638,27 @@ a {
   color: #20362b;
 }
 
+.accounting-body .detail-block-title {
+  color: #20362b;
+}
+
+.eu-projects-body .detail-block-title {
+  color: #20362b;
+}
+
 .vat-registration-body .detail-block-title::before {
   background: linear-gradient(90deg, var(--accent-gold), #b1935a);
 }
 
 .payroll-hr-body .detail-block-title::before {
+  background: linear-gradient(90deg, var(--accent-gold), #b1935a);
+}
+
+.accounting-body .detail-block-title::before {
+  background: linear-gradient(90deg, var(--accent-gold), #b1935a);
+}
+
+.eu-projects-body .detail-block-title::before {
   background: linear-gradient(90deg, var(--accent-gold), #b1935a);
 }
 
@@ -1175,11 +1672,29 @@ a {
   border-color: rgba(47, 107, 79, 0.12);
 }
 
+.accounting-body .detail-benefit-item {
+  background: #ffffff;
+  border-color: rgba(47, 107, 79, 0.12);
+}
+
+.eu-projects-body .detail-benefit-item {
+  background: #ffffff;
+  border-color: rgba(47, 107, 79, 0.12);
+}
+
 .vat-registration-body .detail-benefit-item span:last-child {
   color: #314d3e;
 }
 
 .payroll-hr-body .detail-benefit-item span:last-child {
+  color: #314d3e;
+}
+
+.accounting-body .detail-benefit-item span:last-child {
+  color: #314d3e;
+}
+
+.eu-projects-body .detail-benefit-item span:last-child {
   color: #314d3e;
 }
 
@@ -1193,11 +1708,29 @@ a {
   border-color: #cf8f49;
 }
 
+.accounting-body .detail-benefit-check,
+.accounting-body .detail-benefit-check::after {
+  border-color: #cf8f49;
+}
+
+.eu-projects-body .detail-benefit-check,
+.eu-projects-body .detail-benefit-check::after {
+  border-color: #cf8f49;
+}
+
 .vat-registration-body .detail-step-item:not(:last-child)::after {
   background: linear-gradient(180deg, rgba(201, 169, 106, 0.55), rgba(47, 107, 79, 0.2));
 }
 
 .payroll-hr-body .detail-step-item:not(:last-child)::after {
+  background: linear-gradient(180deg, rgba(201, 169, 106, 0.55), rgba(47, 107, 79, 0.2));
+}
+
+.accounting-body .detail-step-item:not(:last-child)::after {
+  background: linear-gradient(180deg, rgba(201, 169, 106, 0.55), rgba(47, 107, 79, 0.2));
+}
+
+.eu-projects-body .detail-step-item:not(:last-child)::after {
   background: linear-gradient(180deg, rgba(201, 169, 106, 0.55), rgba(47, 107, 79, 0.2));
 }
 
@@ -1213,6 +1746,18 @@ a {
   color: #284a39;
 }
 
+.accounting-body .detail-step-number {
+  background: #ffffff;
+  border-color: #cf8f49;
+  color: #284a39;
+}
+
+.eu-projects-body .detail-step-number {
+  background: #ffffff;
+  border-color: #cf8f49;
+  color: #284a39;
+}
+
 .vat-registration-body .detail-step-copy h3 {
   color: #20362b;
 }
@@ -1221,11 +1766,27 @@ a {
   color: #20362b;
 }
 
+.accounting-body .detail-step-copy h3 {
+  color: #20362b;
+}
+
+.eu-projects-body .detail-step-copy h3 {
+  color: #20362b;
+}
+
 .vat-registration-body .detail-step-copy p {
   color: #5a6d62;
 }
 
 .payroll-hr-body .detail-step-copy p {
+  color: #5a6d62;
+}
+
+.accounting-body .detail-step-copy p {
+  color: #5a6d62;
+}
+
+.eu-projects-body .detail-step-copy p {
   color: #5a6d62;
 }
 
@@ -1406,24 +1967,62 @@ a {
 }
 
 .detail-benefit-check {
-  border: 2px solid #cf8f49;
+  background: linear-gradient(155deg, #fffdf9, #fbf3e6);
+  border: 2px solid var(--benefit-ring);
   border-radius: 999px;
   display: inline-block;
   height: 1.35rem;
+  opacity: 0;
   position: relative;
+  transform: scale(0.86);
   width: 1.35rem;
+  box-shadow:
+    0 0 0 0.5px var(--benefit-ring-glow),
+    0 0 0 1px rgba(255, 255, 255, 0.95) inset,
+    0 var(--benefit-check-shadow-y) var(--benefit-check-shadow-blur) rgba(40, 78, 60, var(--benefit-check-shadow-alpha));
+  animation: benefit-check-enter var(--benefit-check-enter-duration) cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(0.33s + (var(--benefit-index, 0) * 0.14s));
+}
+
+.detail-benefit-check::before {
+  border: 1px solid var(--benefit-ring-soft);
+  border-radius: inherit;
+  content: "";
+  inset: -0.34rem;
+  opacity: 0;
+  position: absolute;
+  transform: scale(0.9);
+  animation: benefit-check-pulse var(--benefit-pulse-duration) ease-out forwards;
+  animation-delay: calc(0.43s + (var(--benefit-index, 0) * 0.14s));
 }
 
 .detail-benefit-check::after {
-  border-bottom: 2px solid #cf8f49;
-  border-right: 2px solid #cf8f49;
+  border-bottom: 2px solid var(--benefit-ring);
+  border-right: 2px solid var(--benefit-ring);
   content: "";
   height: 0.45rem;
   left: 0.38rem;
+  opacity: 0;
   position: absolute;
   top: 0.18rem;
-  transform: rotate(45deg);
+  transform: rotate(45deg) scale(0.45);
+  transform-origin: 55% 60%;
   width: 0.24rem;
+  animation: benefit-check-mark-in var(--benefit-check-mark-duration) ease-out forwards;
+  animation-delay: calc(0.43s + (var(--benefit-index, 0) * 0.14s));
+}
+
+.detail-benefit-item:focus-visible {
+  outline: 3px solid rgba(111, 175, 143, 0.36);
+  outline-offset: 4px;
+}
+
+.detail-benefit-item:focus-visible .detail-benefit-check {
+  box-shadow:
+    0 0 0 3px rgba(111, 175, 143, var(--benefit-focus-ring-alpha)),
+    0 0 0 0.5px var(--benefit-ring-glow),
+    0 0 0 1px rgba(255, 255, 255, 0.95) inset,
+    0 10px 18px rgba(40, 78, 60, 0.12);
 }
 
 @keyframes benefit-slide-in {
@@ -1443,11 +2042,208 @@ a {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+@keyframes benefit-check-enter {
+  0% {
+    opacity: 0;
+    transform: scale(0.86);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes benefit-check-enter-soft {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes benefit-check-enter-accented {
+  0% {
+    opacity: 0;
+    transform: scale(0.82);
+  }
+
+  70% {
+    opacity: 1;
+    transform: scale(1.07);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes benefit-check-mark-in {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.45);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+@keyframes benefit-check-pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  20% {
+    opacity: 0.32;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.32);
+  }
+}
+
+@keyframes benefit-check-pulse-soft {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  20% {
+    opacity: 0.22;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.22);
+  }
+}
+
+@keyframes benefit-check-pulse-accented {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  20% {
+    opacity: 0.42;
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.42);
+  }
+}
+
+@media (max-width: 767px) {
   .detail-benefit-item {
+    animation: benefit-fade-in 0.35s ease-out forwards;
+    animation-delay: calc(0.1s + (var(--benefit-index, 0) * 0.08s));
+    transform: none;
+  }
+
+  .detail-benefit-check,
+  .detail-benefit-check::before,
+  .detail-benefit-check::after {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .detail-benefit-check::before {
+    display: none;
+  }
+
+  .detail-benefit-check::after {
+    transform: rotate(45deg);
+  }
+
+  .detail-step-number {
+    animation: none;
+  }
+
+  .detail-process-column.is-visible .detail-step-number {
+    animation: step-number-pulse-simple 0.7s ease both;
+    animation-delay: calc(0.7s + (var(--step-index, 0) * 0.76s));
+  }
+}
+
+@keyframes step-number-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(207, 143, 73, 0);
+    transform: scale(1);
+  }
+
+  38% {
+    box-shadow: 0 0 0 6px rgba(207, 143, 73, 0.18);
+    transform: scale(1.22);
+  }
+
+  72% {
+    box-shadow: 0 0 0 1px rgba(207, 143, 73, 0.04);
+    transform: scale(0.97);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(207, 143, 73, 0);
+    transform: scale(1);
+  }
+}
+
+@keyframes step-number-pulse-simple {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.13); }
+  100% { transform: scale(1); }
+}
+
+@keyframes benefit-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-benefit-item,
+  .detail-benefit-check,
+  .detail-benefit-check::before,
+  .detail-benefit-check::after {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .detail-benefit-check::before {
+    display: none;
+  }
+
+  .detail-benefit-check::after {
+    transform: rotate(45deg);
+  }
+
+  .detail-step-number {
+    animation: none;
   }
 }
 
@@ -1488,6 +2284,13 @@ a {
   height: 2rem;
   justify-content: center;
   width: 2rem;
+  will-change: transform, box-shadow;
+  animation: none;
+}
+
+.detail-process-column.is-visible .detail-step-number {
+  animation: step-number-pulse 1.04s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(1.4s + (var(--step-index, 0) * 1.2s));
 }
 
 .detail-step-copy h3 {
@@ -1767,6 +2570,36 @@ a {
   .payroll-hr-body .service-detail-benefits-media,
   .payroll-hr-body .service-detail-process-media,
   .payroll-hr-body .detail-process-column {
+    min-height: 16rem;
+  }
+
+  .accounting-body {
+    grid-template-areas:
+      "benefits"
+      "media"
+      "process-media"
+      "process";
+    row-gap: 1.5rem;
+  }
+
+  .accounting-body .service-detail-benefits-media,
+  .accounting-body .service-detail-process-media,
+  .accounting-body .detail-process-column {
+    min-height: 16rem;
+  }
+
+  .eu-projects-body {
+    grid-template-areas:
+      "benefits"
+      "media"
+      "process-media"
+      "process";
+    row-gap: 1.5rem;
+  }
+
+  .eu-projects-body .service-detail-benefits-media,
+  .eu-projects-body .service-detail-process-media,
+  .eu-projects-body .detail-process-column {
     min-height: 16rem;
   }
 

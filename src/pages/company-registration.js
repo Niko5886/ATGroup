@@ -10,6 +10,8 @@ export function companyRegistrationPage() {
     ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
+    backHref: "/home",
+    backLabel: "Назад",
     heroClass: "company-registration-hero",
     bodyClass: "company-registration-body",
     showBenefitsImage: true,
