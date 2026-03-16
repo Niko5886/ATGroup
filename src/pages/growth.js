@@ -8,14 +8,14 @@ export function growthPage() {
     </section>
 
     <section class="service-grid service-grid-4 growth-grid">
-      <article class="service-card growth-card growth-card-brand service-card-clickable" data-card-link="/brand-identity" tabindex="0" role="link" aria-label="Създаване на Бранд Идентичност">
+      <article class="service-card service-card-blue service-card-brand-identity service-card-clickable" data-card-link="/brand-identity" tabindex="0" role="link" aria-label="Създаване на Бранд Идентичност">
         ${renderServiceIcon("palette")}
         <h3>Създаване на Бранд Идентичност</h3>
         <p>Изграждане на уникална и запомняща се идентичност на марката, която резонира с вашата целева аудитория и се отличава на пазара.</p>
         <a href="/brand-identity" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card growth-card growth-card-logo service-card-clickable" data-card-link="/logo-design" tabindex="0" role="link" aria-label="Лого Дизайн">
+      <article class="service-card service-card-blue service-card-logo-design service-card-clickable" data-card-link="/logo-design" tabindex="0" role="link" aria-label="Лого Дизайн">
         ${renderServiceIcon("sparkles")}
         <h3>Лого Дизайн</h3>
         <p>Дизайн на отличителни лога, които улавят същността на вашия бранд и създават трайни впечатления във всички платформи.</p>
