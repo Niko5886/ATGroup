@@ -9,6 +9,28 @@ let sectionSpyObserver;
 let lastSyncedHomeSection;
 let lastScrollY = window.scrollY;
 
+function openContactModal() {
+  const modal = document.getElementById("contactModal");
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.add("is-open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("modal-open");
+}
+
+function closeContactModal() {
+  const modal = document.getElementById("contactModal");
+  if (!modal) {
+    return;
+  }
+
+  modal.classList.remove("is-open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("modal-open");
+}
+
 function syncHeaderCompactState() {
   const header = document.querySelector(".site-header");
   if (!header) {
@@ -246,6 +268,31 @@ window.addEventListener("popstate", () => {
 });
 
 document.addEventListener("click", (event) => {
+  const openContactModalTrigger = event.target.closest("[data-open-contact-modal]");
+  if (openContactModalTrigger) {
+    event.preventDefault();
+    openContactModal();
+
+    const mainNav = document.getElementById("mainNav");
+    if (mainNav?.classList.contains("show") && window.bootstrap?.Collapse) {
+      window.bootstrap.Collapse.getOrCreateInstance(mainNav).hide();
+    }
+    return;
+  }
+
+  const closeContactModalTrigger = event.target.closest("[data-close-contact-modal]");
+  if (closeContactModalTrigger) {
+    event.preventDefault();
+    closeContactModal();
+    return;
+  }
+
+  const contactModalOverlay = event.target.closest("[data-contact-modal]");
+  if (contactModalOverlay && event.target === contactModalOverlay) {
+    closeContactModal();
+    return;
+  }
+
   const link = event.target.closest("a[data-link]");
   const card = event.target.closest("[data-card-link]");
 
@@ -272,6 +319,11 @@ document.addEventListener("click", (event) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeContactModal();
+    return;
+  }
+
   const card = event.target.closest("[data-card-link]");
 
   if (!card || (event.key !== "Enter" && event.key !== " ")) {
@@ -282,6 +334,17 @@ document.addEventListener("keydown", (event) => {
   navigateTo(card.getAttribute("data-card-link"));
   initScrollReveal();
   initHomeSectionSpy();
+});
+
+document.addEventListener("submit", (event) => {
+  const form = event.target.closest(".contact-modal__form");
+  if (!form) {
+    return;
+  }
+
+  // UI-only modal form for now: keep user on page after submit click.
+  event.preventDefault();
+  closeContactModal();
 });
 
 window.addEventListener("resize", () => {

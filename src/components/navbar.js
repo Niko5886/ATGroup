@@ -61,7 +61,7 @@ export function renderNavbar(activePath) {
               <span class="nav-indicator" aria-hidden="true"></span>
               ${links}
               <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                <a class="btn at-cta" href="${normalizedPath === "/home" ? "/home#contacts" : "/contacts"}" data-home-section="contacts" data-link>Контакт</a>
+                <a class="btn at-cta" href="/contacts" data-open-contact-modal data-home-section="contacts">Контакт</a>
               </li>
             </ul>
           </div>

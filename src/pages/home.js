@@ -1,7 +1,6 @@
 import { basicsPage } from "./basics.js";
 import { growthPage } from "./growth.js";
 import { futurePage } from "./future.js";
-import { contactsPage } from "./contacts.js";
 import { renderHeroIllustration } from "../components/icons.js";
 
 export function homePage() {
@@ -26,16 +25,12 @@ export function homePage() {
         ${basicsPage()}
       </section>
 
-      <section id="growth" class="story-section reveal-on-scroll">
-        ${growthPage()}
-      </section>
-
       <section id="future" class="story-section reveal-on-scroll">
         ${futurePage()}
       </section>
 
-      <section id="contacts" class="story-section reveal-on-scroll">
-        ${contactsPage()}
+      <section id="growth" class="story-section reveal-on-scroll">
+        ${growthPage()}
       </section>
     </div>
   `;
