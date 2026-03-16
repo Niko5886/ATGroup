@@ -2,14 +2,12 @@ import { basicsPage } from "./basics.js";
 import { growthPage } from "./growth.js";
 import { futurePage } from "./future.js";
 import { audiencePage } from "./audience.js";
-import { renderHeroIllustration } from "../components/icons.js";
 
 export function homePage() {
   return `
     <div class="home-stack">
       <section id="home-top" class="story-section story-section-hero is-visible">
         <section class="hero-block">
-          ${renderHeroIllustration()}
           <p class="eyebrow">AT GROUP</p>
           <h1 class="hero-title">Повишете вашето <span>цифрово присъствие</span></h1>
           <p class="hero-lead">
