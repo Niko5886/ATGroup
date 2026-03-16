@@ -7,7 +7,6 @@ let revealObserver;
 let triggerObserver;
 let sectionSpyObserver;
 let lastSyncedHomeSection;
-let lastScrollY = window.scrollY;
 
 function syncBackToTopState() {
   const backToTopButton = document.querySelector("[data-scroll-top]");
@@ -38,39 +37,6 @@ function closeContactModal() {
   modal.classList.remove("is-open");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
-}
-
-function syncHeaderCompactState() {
-  const header = document.querySelector(".site-header");
-  if (!header) {
-    return;
-  }
-
-  header.classList.toggle("is-compact", window.scrollY > 36);
-}
-
-function syncHeaderVisibilityState() {
-  const header = document.querySelector(".site-header");
-  if (!header) {
-    return;
-  }
-
-  const currentScrollY = window.scrollY;
-  const delta = currentScrollY - lastScrollY;
-
-  if (currentScrollY <= 72) {
-    header.classList.remove("is-hidden");
-    lastScrollY = currentScrollY;
-    return;
-  }
-
-  if (delta > 6 && currentScrollY > 140) {
-    header.classList.add("is-hidden");
-  } else if (delta < -6) {
-    header.classList.remove("is-hidden");
-  }
-
-  lastScrollY = currentScrollY;
 }
 
 function updateNavIndicator() {
@@ -259,13 +225,10 @@ function initScrollReveal() {
 function renderCurrentPath() {
   renderRoute(window.location.pathname);
   lastSyncedHomeSection = undefined;
-  lastScrollY = window.scrollY;
   initScrollReveal();
   initHomeSectionSpy();
   requestAnimationFrame(() => {
     updateNavIndicator();
-    syncHeaderCompactState();
-    syncHeaderVisibilityState();
     syncBackToTopState();
   });
   scrollToCurrentHash();
@@ -369,7 +332,5 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("scroll", () => {
-  syncHeaderCompactState();
-  syncHeaderVisibilityState();
   syncBackToTopState();
 });

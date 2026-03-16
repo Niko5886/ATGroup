@@ -36,13 +36,6 @@ export function renderNavbar(activePath) {
       <nav class="navbar navbar-expand-lg at-navbar">
         <div class="container-fluid px-0">
           <a class="navbar-brand at-brand" href="/home" data-link>
-            <span class="at-brand-mark" aria-hidden="true">
-              <svg viewBox="0 0 120 120" focusable="false">
-                <path d="M60 8l6 20 20 6-20 6-6 20-6-20-20-6 20-6z"></path>
-                <path d="M82 58l3 10 10 3-10 3-3 10-3-10-10-3 10-3z"></path>
-                <path d="M37 59l2 7 7 2-7 2-2 7-2-7-7-2 7-2z"></path>
-              </svg>
-            </span>
             <span>AT Group</span>
           </a>
           <button
