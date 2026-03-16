@@ -62,6 +62,36 @@ const SERVICE_ICONS = {
       <path d="M9 8h.01M12 8h.01M15 8h.01M9 11h.01M12 11h.01M15 11h.01M9 14h.01M12 14h.01M15 14h.01M11 20v-3h2v3"></path>
     </svg>
   `,
+  palette: `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 4a8 8 0 0 0 0 16h1.2a2.3 2.3 0 0 0 0-4.6h-.7a1.6 1.6 0 0 1-1.6-1.6A1.8 1.8 0 0 1 12.7 12H14a6 6 0 0 0 0-12z"></path>
+      <circle cx="8.2" cy="9.2" r="1"></circle>
+      <circle cx="12" cy="7.4" r="1"></circle>
+      <circle cx="15.8" cy="9.2" r="1"></circle>
+    </svg>
+  `,
+  sparkles: `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M12 3l1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8z"></path>
+      <path d="M18.5 3.5l.8 2 .2.5 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"></path>
+      <path d="M5.5 14.5l1 2.5 2.5 1-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"></path>
+    </svg>
+  `,
+  code: `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M8 8l-4 4 4 4"></path>
+      <path d="M16 8l4 4-4 4"></path>
+      <path d="M14 5l-4 14"></path>
+    </svg>
+  `,
+  chartUp: `
+    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M4 18V6"></path>
+      <path d="M4 18h16"></path>
+      <path d="M7 15l4-4 3 3 5-6"></path>
+      <path d="M16 8h3v3"></path>
+    </svg>
+  `,
   heroSpark: `
     <svg viewBox="0 0 120 120" aria-hidden="true" focusable="false">
       <path d="M60 8l6 20 20 6-20 6-6 20-6-20-20-6 20-6z"></path>
