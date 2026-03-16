@@ -10,6 +10,9 @@ export function renderPageLayout(content, pathname) {
         <section class="site-content">${content}</section>
         ${renderFooter()}
       </main>
+      <button class="back-to-top" type="button" data-scroll-top aria-label="Връщане в началото" title="Към началото">
+        <span class="back-to-top-arrow" aria-hidden="true">↑</span>
+      </button>
       ${renderContactModal()}
     </div>
   `;

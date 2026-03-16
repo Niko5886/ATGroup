@@ -583,17 +583,19 @@ a {
 
 .service-card-company-registration {
   background:
-    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
-    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    linear-gradient(132deg, rgba(33, 68, 52, 0.34), rgba(22, 49, 37, 0.46)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.38), transparent 48%),
     url("../assets/images/%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D0%B8%D1%80%D0%BC%D0%B8.jpg") center/cover no-repeat;
-  border-color: rgba(214, 233, 221, 0.42);
-  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  border-color: rgba(221, 238, 228, 0.48);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.14);
   color: #f4f8f6;
   overflow: hidden;
 }
 
 .service-card-company-registration::before {
-  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  background:
+    radial-gradient(circle at 20% 10%, rgba(245, 251, 247, 0.24), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(24, 48, 36, 0.18) 50%, rgba(16, 33, 25, 0.3));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -608,16 +610,17 @@ a {
 
 .service-card-company-registration h3 {
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+  text-shadow: 0 2px 10px rgba(8, 17, 13, 0.3);
 }
 
 .service-card-company-registration p {
-  color: rgba(240, 247, 243, 0.92);
+  color: rgba(246, 252, 249, 0.96);
+  text-shadow: 0 1px 7px rgba(7, 15, 11, 0.24);
 }
 
 .service-card-company-registration a {
-  border-top-color: rgba(238, 247, 242, 0.32);
-  color: #eff9f3;
+  border-top-color: rgba(244, 251, 247, 0.44);
+  color: #f7fcfa;
 }
 
 .service-card-company-registration a:hover,
@@ -626,8 +629,8 @@ a {
 }
 
 .service-card-company-registration .card-icon {
-  background: linear-gradient(145deg, rgba(237, 247, 242, 0.2), rgba(237, 247, 242, 0.08));
-  border-color: rgba(230, 241, 235, 0.4);
+  background: linear-gradient(145deg, rgba(245, 251, 248, 0.34), rgba(237, 247, 242, 0.14));
+  border-color: rgba(236, 246, 240, 0.56);
 }
 
 .service-card-company-registration .card-icon svg {
@@ -635,8 +638,8 @@ a {
 }
 
 .service-card-company-registration:hover {
-  border-color: rgba(232, 245, 238, 0.58);
-  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+  border-color: rgba(237, 248, 242, 0.72);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.2);
 }
 
 .service-card-company-registration:hover::after {
@@ -769,17 +772,19 @@ a {
 
 .service-card-accounting {
   background:
-    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
-    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
     url("../assets/images/%D0%BF%D1%80%D0%BE%D1%84.%D1%81%D1%87%D0%B5%D1%82.jpg") center/cover no-repeat;
   border-color: rgba(214, 233, 221, 0.42);
-  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.2);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.17);
   color: #f4f8f6;
   overflow: hidden;
 }
 
 .service-card-accounting::before {
-  background: linear-gradient(180deg, rgba(7, 16, 12, 0.12), rgba(7, 16, 12, 0.44));
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 41, 31, 0.2) 48%, rgba(14, 30, 23, 0.36));
   content: "";
   inset: 0;
   pointer-events: none;
@@ -794,16 +799,17 @@ a {
 
 .service-card-accounting h3 {
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(9, 20, 15, 0.22);
+  text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
 }
 
 .service-card-accounting p {
-  color: rgba(240, 247, 243, 0.92);
+  color: rgba(245, 251, 248, 0.95);
+  text-shadow: 0 1px 6px rgba(8, 18, 13, 0.22);
 }
 
 .service-card-accounting a {
-  border-top-color: rgba(238, 247, 242, 0.32);
-  color: #eff9f3;
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: #f4fbf7;
 }
 
 .service-card-accounting a:hover,
@@ -812,8 +818,8 @@ a {
 }
 
 .service-card-accounting .card-icon {
-  background: linear-gradient(145deg, rgba(237, 247, 242, 0.2), rgba(237, 247, 242, 0.08));
-  border-color: rgba(230, 241, 235, 0.4);
+  background: linear-gradient(145deg, rgba(243, 250, 246, 0.3), rgba(236, 246, 240, 0.12));
+  border-color: rgba(233, 244, 238, 0.52);
 }
 
 .service-card-accounting .card-icon svg {
@@ -822,7 +828,7 @@ a {
 
 .service-card-accounting:hover {
   border-color: rgba(232, 245, 238, 0.58);
-  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.28);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.24);
 }
 
 .service-card-accounting:hover::after {
@@ -889,6 +895,162 @@ a {
 
 .service-card-eu-projects:hover::after {
   opacity: 0.9;
+}
+
+/* Variant A (light) unified style for all six Basics cards */
+.service-card-coming-soon,
+.service-card-company-registration,
+.service-card-vat-registration,
+.service-card-payroll-hr,
+.service-card-accounting,
+.service-card-eu-projects {
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.17);
+  color: #f4f8f6;
+}
+
+.service-card-coming-soon {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/productiv.jpg") center/cover no-repeat;
+}
+
+.service-card-company-registration {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D0%B8%D1%80%D0%BC%D0%B8.jpg") center/cover no-repeat;
+}
+
+.service-card-vat-registration {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/%D0%B4%D0%B4%D1%81.jpg") center/cover no-repeat;
+}
+
+.service-card-payroll-hr {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/%D0%A2%D0%A0%D0%97.jpg") center/cover no-repeat;
+}
+
+.service-card-accounting {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/%D0%BF%D1%80%D0%BE%D1%84.%D1%81%D1%87%D0%B5%D1%82.jpg") center/cover no-repeat;
+}
+
+.service-card-eu-projects {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/%D0%BA%D0%BE%D0%BD%D1%81%D0%95%D0%B2%D1%80%D0%BE%D0%9F%D1%80.jpg") center/cover no-repeat;
+}
+
+.service-card-coming-soon::before,
+.service-card-company-registration::before,
+.service-card-vat-registration::before,
+.service-card-payroll-hr::before,
+.service-card-accounting::before,
+.service-card-eu-projects::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 41, 31, 0.2) 48%, rgba(14, 30, 23, 0.36));
+  transition: background 0.25s ease;
+}
+
+.service-card-coming-soon:hover::before,
+.service-card-company-registration:hover::before,
+.service-card-vat-registration:hover::before,
+.service-card-payroll-hr:hover::before,
+.service-card-accounting:hover::before,
+.service-card-eu-projects:hover::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.21), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 41, 31, 0.17) 48%, rgba(14, 30, 23, 0.31));
+}
+
+.service-card-coming-soon h3,
+.service-card-company-registration h3,
+.service-card-vat-registration h3,
+.service-card-payroll-hr h3,
+.service-card-accounting h3,
+.service-card-eu-projects h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
+}
+
+.service-card-coming-soon p,
+.service-card-company-registration p,
+.service-card-vat-registration p,
+.service-card-payroll-hr p,
+.service-card-accounting p,
+.service-card-eu-projects p {
+  color: rgba(245, 251, 248, 0.95);
+  text-shadow: 0 1px 6px rgba(8, 18, 13, 0.22);
+}
+
+.service-card-coming-soon a,
+.service-card-company-registration a,
+.service-card-vat-registration a,
+.service-card-payroll-hr a,
+.service-card-accounting a,
+.service-card-eu-projects a {
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: #f4fbf7;
+}
+
+.service-card-coming-soon a:hover,
+.service-card-coming-soon a:focus,
+.service-card-company-registration a:hover,
+.service-card-company-registration a:focus,
+.service-card-vat-registration a:hover,
+.service-card-vat-registration a:focus,
+.service-card-payroll-hr a:hover,
+.service-card-payroll-hr a:focus,
+.service-card-accounting a:hover,
+.service-card-accounting a:focus,
+.service-card-eu-projects a:hover,
+.service-card-eu-projects a:focus {
+  color: #ffffff;
+}
+
+.service-card-coming-soon .card-icon,
+.service-card-company-registration .card-icon,
+.service-card-vat-registration .card-icon,
+.service-card-payroll-hr .card-icon,
+.service-card-accounting .card-icon,
+.service-card-eu-projects .card-icon {
+  background: linear-gradient(145deg, rgba(243, 250, 246, 0.3), rgba(236, 246, 240, 0.12));
+  border-color: rgba(233, 244, 238, 0.52);
+}
+
+.service-card-coming-soon .card-icon svg,
+.service-card-company-registration .card-icon svg,
+.service-card-vat-registration .card-icon svg,
+.service-card-payroll-hr .card-icon svg,
+.service-card-accounting .card-icon svg,
+.service-card-eu-projects .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-coming-soon:hover,
+.service-card-company-registration:hover,
+.service-card-vat-registration:hover,
+.service-card-payroll-hr:hover,
+.service-card-accounting:hover,
+.service-card-eu-projects:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.24);
+}
+
+.service-card-coming-soon-label {
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: rgba(245, 251, 248, 0.78);
 }
 
 .audience-grid {
@@ -2666,6 +2828,59 @@ body.modal-open {
   text-align: center;
 }
 
+.back-to-top {
+  align-items: center;
+  background: linear-gradient(145deg, #ffffff, #eaf4ee);
+  border: 1px solid rgba(47, 107, 79, 0.32);
+  border-radius: 999px;
+  bottom: 1.4rem;
+  box-shadow:
+    0 12px 24px rgba(38, 78, 58, 0.16),
+    0 0 0 1px rgba(255, 255, 255, 0.68) inset;
+  color: #2a5a43;
+  cursor: pointer;
+  display: inline-flex;
+  height: 3rem;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 1.4rem;
+  transform: translateY(10px) scale(0.95);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+  width: 3rem;
+  z-index: 1030;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  border-color: rgba(47, 107, 79, 0.48);
+  box-shadow:
+    0 16px 30px rgba(34, 70, 53, 0.22),
+    0 0 0 4px rgba(111, 175, 143, 0.2);
+  color: #1f4d39;
+  outline: none;
+}
+
+.back-to-top-arrow {
+  display: inline-flex;
+  font-size: 1.3rem;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
 .navbar-toggler {
   border-color: rgba(47, 107, 79, 0.35);
 }
@@ -2758,6 +2973,11 @@ body.modal-open {
 
   .home-stack {
     gap: 2.2rem;
+  }
+
+  .back-to-top {
+    bottom: 1rem;
+    right: 1rem;
   }
 
   .story-section {

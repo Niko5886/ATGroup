@@ -9,6 +9,15 @@ let sectionSpyObserver;
 let lastSyncedHomeSection;
 let lastScrollY = window.scrollY;
 
+function syncBackToTopState() {
+  const backToTopButton = document.querySelector("[data-scroll-top]");
+  if (!backToTopButton) {
+    return;
+  }
+
+  backToTopButton.classList.toggle("is-visible", window.scrollY > 360);
+}
+
 function openContactModal() {
   const modal = document.getElementById("contactModal");
   if (!modal) {
@@ -257,6 +266,7 @@ function renderCurrentPath() {
     updateNavIndicator();
     syncHeaderCompactState();
     syncHeaderVisibilityState();
+    syncBackToTopState();
   });
   scrollToCurrentHash();
 }
@@ -268,6 +278,13 @@ window.addEventListener("popstate", () => {
 });
 
 document.addEventListener("click", (event) => {
+  const scrollTopTrigger = event.target.closest("[data-scroll-top]");
+  if (scrollTopTrigger) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
+
   const openContactModalTrigger = event.target.closest("[data-open-contact-modal]");
   if (openContactModalTrigger) {
     event.preventDefault();
@@ -354,4 +371,5 @@ window.addEventListener("resize", () => {
 window.addEventListener("scroll", () => {
   syncHeaderCompactState();
   syncHeaderVisibilityState();
+  syncBackToTopState();
 });
