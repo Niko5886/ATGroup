@@ -11,7 +11,7 @@ export function emailSecurityPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#future",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "email-security-hero",
     bodyClass: "email-security-body",
     showBenefitsImage: true,

@@ -11,7 +11,7 @@ export function brandIdentityPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#growth",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "brand-identity-hero",
     bodyClass: "brand-identity-body",
     showBenefitsImage: true,

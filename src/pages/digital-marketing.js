@@ -11,7 +11,7 @@ export function digitalMarketingPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#growth",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "digital-marketing-hero",
     bodyClass: "digital-marketing-body",
     showBenefitsImage: true,

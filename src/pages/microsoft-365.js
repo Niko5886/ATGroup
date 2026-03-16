@@ -11,7 +11,7 @@ export function microsoft365Page() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#future",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "microsoft-365-hero",
     bodyClass: "microsoft-365-body",
     showBenefitsImage: true,

@@ -11,7 +11,7 @@ export function processAutomationPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#future",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "process-automation-hero",
     bodyClass: "process-automation-body",
     showBenefitsImage: true,

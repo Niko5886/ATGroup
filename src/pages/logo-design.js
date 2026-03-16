@@ -11,7 +11,7 @@ export function logoDesignPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#growth",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "logo-design-hero",
     bodyClass: "logo-design-body",
     showBenefitsImage: true,

@@ -11,7 +11,7 @@ export function aiIntegrationPage() {
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
     backHref: "/home#future",
-    backLabel: "Назад към начало",
+    backLabel: "Назад",
     heroClass: "ai-integration-hero",
     bodyClass: "ai-integration-body",
     showBenefitsImage: true,
