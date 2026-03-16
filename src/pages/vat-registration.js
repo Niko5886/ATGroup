@@ -16,7 +16,6 @@ export function vatRegistrationPage() {
     bodyClass: "vat-registration-body",
     showBenefitsImage: true,
     showProcessImage: true,
-    useBenefitsAccordion: true,
     benefitsTitle: "Ключови Предимства",
     benefits: [
       "Анализ на необходимостта от регистрация",
