@@ -939,6 +939,294 @@ a {
   opacity: 0.9;
 }
 
+.service-card-microsoft-365 {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/mic365.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.17);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-microsoft-365::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 41, 31, 0.2) 48%, rgba(14, 30, 23, 0.36));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  transition: background 0.25s ease;
+}
+
+.service-card-microsoft-365:hover::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.21), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 41, 31, 0.17) 48%, rgba(14, 30, 23, 0.31));
+}
+
+.service-card-microsoft-365 > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-microsoft-365 h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
+}
+
+.service-card-microsoft-365 p {
+  color: rgba(245, 251, 248, 0.95);
+  text-shadow: 0 1px 6px rgba(8, 18, 13, 0.22);
+}
+
+.service-card-microsoft-365 a {
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: #f4fbf7;
+}
+
+.service-card-microsoft-365 a:hover,
+.service-card-microsoft-365 a:focus {
+  color: #ffffff;
+}
+
+.service-card-microsoft-365 .card-icon {
+  background: linear-gradient(145deg, rgba(243, 250, 246, 0.3), rgba(236, 246, 240, 0.12));
+  border-color: rgba(233, 244, 238, 0.52);
+}
+
+.service-card-microsoft-365 .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-microsoft-365:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.24);
+}
+
+.service-card-microsoft-365:hover::after {
+  opacity: 0.9;
+}
+
+.service-card-email-security {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/meil.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.17);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-email-security::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 41, 31, 0.2) 48%, rgba(14, 30, 23, 0.36));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  transition: background 0.25s ease;
+}
+
+.service-card-email-security:hover::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.21), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 41, 31, 0.17) 48%, rgba(14, 30, 23, 0.31));
+}
+
+.service-card-email-security > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-email-security h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
+}
+
+.service-card-email-security p {
+  color: rgba(245, 251, 248, 0.95);
+  text-shadow: 0 1px 6px rgba(8, 18, 13, 0.22);
+}
+
+.service-card-email-security a {
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: #f4fbf7;
+}
+
+.service-card-email-security a:hover,
+.service-card-email-security a:focus {
+  color: #ffffff;
+}
+
+.service-card-email-security .card-icon {
+  background: linear-gradient(145deg, rgba(243, 250, 246, 0.3), rgba(236, 246, 240, 0.12));
+  border-color: rgba(233, 244, 238, 0.52);
+}
+
+.service-card-email-security .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-email-security:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.24);
+}
+
+.service-card-email-security:hover::after {
+  opacity: 0.9;
+}
+
+.service-card-ai-integration {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/AI.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.17);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-ai-integration::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 41, 31, 0.2) 48%, rgba(14, 30, 23, 0.36));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  transition: background 0.25s ease;
+}
+
+.service-card-ai-integration:hover::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.21), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 41, 31, 0.17) 48%, rgba(14, 30, 23, 0.31));
+}
+
+.service-card-ai-integration > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-ai-integration h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
+}
+
+.service-card-ai-integration p {
+  color: rgba(245, 251, 248, 0.95);
+  text-shadow: 0 1px 6px rgba(8, 18, 13, 0.22);
+}
+
+.service-card-ai-integration a {
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: #f4fbf7;
+}
+
+.service-card-ai-integration a:hover,
+.service-card-ai-integration a:focus {
+  color: #ffffff;
+}
+
+.service-card-ai-integration .card-icon {
+  background: linear-gradient(145deg, rgba(243, 250, 246, 0.3), rgba(236, 246, 240, 0.12));
+  border-color: rgba(233, 244, 238, 0.52);
+}
+
+.service-card-ai-integration .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-ai-integration:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.24);
+}
+
+.service-card-ai-integration:hover::after {
+  opacity: 0.9;
+}
+
+.service-card-process-automation {
+  background:
+    linear-gradient(132deg, rgba(28, 59, 45, 0.42), rgba(20, 45, 34, 0.54)),
+    radial-gradient(circle at 84% 12%, rgba(218, 182, 119, 0.34), transparent 50%),
+    url("../assets/images/%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%B8.jpg") center/cover no-repeat;
+  border-color: rgba(214, 233, 221, 0.42);
+  box-shadow: 0 18px 34px rgba(25, 52, 40, 0.17);
+  color: #f4f8f6;
+  overflow: hidden;
+}
+
+.service-card-process-automation::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(20, 41, 31, 0.2) 48%, rgba(14, 30, 23, 0.36));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  transition: background 0.25s ease;
+}
+
+.service-card-process-automation:hover::before {
+  background:
+    radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.21), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(20, 41, 31, 0.17) 48%, rgba(14, 30, 23, 0.31));
+}
+
+.service-card-process-automation > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card-process-automation h3 {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
+}
+
+.service-card-process-automation p {
+  color: rgba(245, 251, 248, 0.95);
+  text-shadow: 0 1px 6px rgba(8, 18, 13, 0.22);
+}
+
+.service-card-process-automation a {
+  border-top-color: rgba(242, 250, 246, 0.4);
+  color: #f4fbf7;
+}
+
+.service-card-process-automation a:hover,
+.service-card-process-automation a:focus {
+  color: #ffffff;
+}
+
+.service-card-process-automation .card-icon {
+  background: linear-gradient(145deg, rgba(243, 250, 246, 0.3), rgba(236, 246, 240, 0.12));
+  border-color: rgba(233, 244, 238, 0.52);
+}
+
+.service-card-process-automation .card-icon svg {
+  stroke: #eef8f2;
+}
+
+.service-card-process-automation:hover {
+  border-color: rgba(232, 245, 238, 0.58);
+  box-shadow: 0 24px 44px rgba(20, 43, 33, 0.24);
+}
+
+.service-card-process-automation:hover::after {
+  opacity: 0.9;
+}
+
 .service-card-vat-registration {
   background:
     linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
@@ -1720,6 +2008,38 @@ a {
   box-shadow: 0 24px 44px rgba(26, 55, 41, 0.2);
 }
 
+.service-detail-hero.microsoft-365-hero {
+  background:
+    linear-gradient(120deg, rgba(20, 42, 33, 0.72), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/mic365.jpg") center/cover no-repeat;
+  box-shadow: 0 24px 44px rgba(26, 55, 41, 0.2);
+}
+
+.service-detail-hero.email-security-hero {
+  background:
+    linear-gradient(120deg, rgba(20, 42, 33, 0.72), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/meil.jpg") center/cover no-repeat;
+  box-shadow: 0 24px 44px rgba(26, 55, 41, 0.2);
+}
+
+.service-detail-hero.ai-integration-hero {
+  background:
+    linear-gradient(120deg, rgba(20, 42, 33, 0.72), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/AI.jpg") center/cover no-repeat;
+  box-shadow: 0 24px 44px rgba(26, 55, 41, 0.2);
+}
+
+.service-detail-hero.process-automation-hero {
+  background:
+    linear-gradient(120deg, rgba(20, 42, 33, 0.72), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 82% 16%, rgba(218, 182, 119, 0.24), transparent 52%),
+    url("../assets/images/%D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%B8.jpg") center/cover no-repeat;
+  box-shadow: 0 24px 44px rgba(26, 55, 41, 0.2);
+}
+
 .service-detail-hero.brand-identity-hero {
   background:
     linear-gradient(120deg, rgba(20, 42, 33, 0.72), rgba(18, 37, 29, 0.76)),
@@ -1731,7 +2051,11 @@ a {
 .service-detail-hero.brand-identity-hero::before,
 .service-detail-hero.logo-design-hero::before,
 .service-detail-hero.web-development-hero::before,
-.service-detail-hero.digital-marketing-hero::before {
+.service-detail-hero.digital-marketing-hero::before,
+.service-detail-hero.microsoft-365-hero::before,
+.service-detail-hero.email-security-hero::before,
+.service-detail-hero.ai-integration-hero::before,
+.service-detail-hero.process-automation-hero::before {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
@@ -1742,7 +2066,11 @@ a {
 .service-detail-hero.brand-identity-hero::after,
 .service-detail-hero.logo-design-hero::after,
 .service-detail-hero.web-development-hero::after,
-.service-detail-hero.digital-marketing-hero::after {
+.service-detail-hero.digital-marketing-hero::after,
+.service-detail-hero.microsoft-365-hero::after,
+.service-detail-hero.email-security-hero::after,
+.service-detail-hero.ai-integration-hero::after,
+.service-detail-hero.process-automation-hero::after {
   background: linear-gradient(180deg, rgba(12, 24, 18, 0.04), rgba(12, 24, 18, 0.26));
   content: "";
   inset: 0;
@@ -1753,7 +2081,11 @@ a {
 .brand-identity-hero .service-detail-cta,
 .logo-design-hero .service-detail-cta,
 .web-development-hero .service-detail-cta,
-.digital-marketing-hero .service-detail-cta {
+.digital-marketing-hero .service-detail-cta,
+.microsoft-365-hero .service-detail-cta,
+.email-security-hero .service-detail-cta,
+.ai-integration-hero .service-detail-cta,
+.process-automation-hero .service-detail-cta {
   backdrop-filter: blur(10px);
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.12));
   border: 1px solid rgba(255, 255, 255, 0.34);
@@ -1762,7 +2094,11 @@ a {
 .brand-identity-hero .service-detail-cta-button,
 .logo-design-hero .service-detail-cta-button,
 .web-development-hero .service-detail-cta-button,
-.digital-marketing-hero .service-detail-cta-button {
+.digital-marketing-hero .service-detail-cta-button,
+.microsoft-365-hero .service-detail-cta-button,
+.email-security-hero .service-detail-cta-button,
+.ai-integration-hero .service-detail-cta-button,
+.process-automation-hero .service-detail-cta-button {
   background: linear-gradient(120deg, #ffffff, #f4f8f6);
   color: #244837;
 }
@@ -1774,7 +2110,15 @@ a {
 .web-development-hero .service-detail-cta-button:hover,
 .web-development-hero .service-detail-cta-button:focus,
 .digital-marketing-hero .service-detail-cta-button:hover,
-.digital-marketing-hero .service-detail-cta-button:focus {
+.digital-marketing-hero .service-detail-cta-button:focus,
+.microsoft-365-hero .service-detail-cta-button:hover,
+.microsoft-365-hero .service-detail-cta-button:focus,
+.email-security-hero .service-detail-cta-button:hover,
+.email-security-hero .service-detail-cta-button:focus,
+.ai-integration-hero .service-detail-cta-button:hover,
+.ai-integration-hero .service-detail-cta-button:focus,
+.process-automation-hero .service-detail-cta-button:hover,
+.process-automation-hero .service-detail-cta-button:focus {
   color: #1b392b;
 }
 
@@ -1907,15 +2251,81 @@ a {
   border-color: rgba(47, 107, 79, 0.14);
 }
 
+.email-security-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.email-security-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.email-security-body .detail-process-column {
+  grid-area: process;
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  min-height: 21rem;
+  padding: 1.2rem;
+}
+
 .email-security-body .service-detail-benefits-media {
   box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
   display: block;
+  grid-area: media;
   min-height: 21rem;
 }
 
 .email-security-body .service-detail-process-media {
   box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
   display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.email-security-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/virus.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.email-security-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.email-security-body .service-detail-process-media::before {
+  background-image: url("../assets/images/dkim.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.email-security-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.email-security-body .detail-process-column,
+.email-security-body .service-detail-benefits-media,
+.email-security-body .service-detail-process-media {
   min-height: 21rem;
 }
 
@@ -2634,6 +3044,261 @@ a {
 }
 
 .digital-marketing-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.service-detail-body.microsoft-365-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.microsoft-365-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.microsoft-365-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.microsoft-365-body .detail-process-column {
+  grid-area: process;
+}
+
+.microsoft-365-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.microsoft-365-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.microsoft-365-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/teams.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.microsoft-365-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.microsoft-365-body .service-detail-process-media::before {
+  background-image: url("../assets/images/mig.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.microsoft-365-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.microsoft-365-body .detail-process-column,
+.microsoft-365-body .service-detail-benefits-media,
+.microsoft-365-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.microsoft-365-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.service-detail-body.ai-integration-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.ai-integration-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.ai-integration-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.ai-integration-body .detail-process-column {
+  grid-area: process;
+}
+
+.ai-integration-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.ai-integration-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.ai-integration-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/automat..jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.ai-integration-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ai-integration-body .service-detail-process-media::before {
+  background-image: url("../assets/images/lerning.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.ai-integration-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.ai-integration-body .detail-process-column,
+.ai-integration-body .service-detail-benefits-media,
+.ai-integration-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.ai-integration-body .detail-process-column {
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.service-detail-body.process-automation-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.process-automation-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.process-automation-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.process-automation-body .detail-process-column {
+  grid-area: process;
+}
+
+.process-automation-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: media;
+  min-height: 21rem;
+}
+
+.process-automation-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  grid-area: process-media;
+  min-height: 21rem;
+}
+
+.process-automation-body .service-detail-benefits-media::before {
+  background-image: url("../assets/images/%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%20%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D0%B8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.process-automation-body .service-detail-benefits-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.process-automation-body .service-detail-process-media::before {
+  background-image: url("../assets/images/%D0%A0%D1%8A%D1%87%D0%BD%D0%B8%20%D0%B3%D1%80%D0%B5%D1%88%D0%BA%D0%B8.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  filter: grayscale(1);
+  inset: 0;
+  position: absolute;
+}
+
+.process-automation-body .service-detail-process-media::after {
+  background: linear-gradient(160deg, rgba(22, 44, 35, 0.18), rgba(22, 44, 35, 0.28));
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.process-automation-body .detail-process-column,
+.process-automation-body .service-detail-benefits-media,
+.process-automation-body .service-detail-process-media {
+  min-height: 21rem;
+}
+
+.process-automation-body .detail-process-column {
   background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
   border: 1px solid rgba(47, 107, 79, 0.14);
   border-radius: 1.2rem;
