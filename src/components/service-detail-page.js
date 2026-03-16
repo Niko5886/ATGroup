@@ -17,7 +17,8 @@ export function renderServiceDetailPage({
   heroClass = "",
   bodyClass = "",
   showBenefitsImage = false,
-  showProcessImage = false
+  showProcessImage = false,
+  useBenefitsAccordion = false
 }) {
   const benefitItems = benefits
     .map(
@@ -54,6 +55,19 @@ export function renderServiceDetailPage({
   const processImagePanel = showProcessImage
     ? '<div class="service-detail-process-media" aria-hidden="true"></div>'
     : "";
+  const benefitsBlockMarkup = useBenefitsAccordion
+    ? `
+      <details class="detail-benefits-accordion">
+        <summary class="detail-benefits-summary">
+          <span class="detail-block-title">${benefitsTitle}</span>
+        </summary>
+        <ul class="detail-benefit-list">${benefitItems}</ul>
+      </details>
+    `
+    : `
+      <h2 class="detail-block-title">${benefitsTitle}</h2>
+      <ul class="detail-benefit-list">${benefitItems}</ul>
+    `;
 
   return `
     <section class="service-detail-page">
@@ -74,8 +88,7 @@ export function renderServiceDetailPage({
 
       <section class="${detailBodyClass}">
         <div class="service-detail-column detail-benefits-column">
-          <h2 class="detail-block-title">${benefitsTitle}</h2>
-          <ul class="detail-benefit-list">${benefitItems}</ul>
+          ${benefitsBlockMarkup}
         </div>
 
         ${benefitsImagePanel}

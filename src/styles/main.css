@@ -509,10 +509,10 @@ a {
 
 .service-card a.btn-pill {
   align-self: flex-start;
-  background: #3ddc6e;
+  background: #2f6b4f;
   border: none;
   border-radius: 50px;
-  color: #0b2318;
+  color: #ffffff;
   font-size: 0.82rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -520,14 +520,14 @@ a {
   padding: 0.6rem 1.6rem;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-  box-shadow: 0 4px 14px rgba(61, 220, 110, 0.32);
+  box-shadow: 0 4px 14px rgba(47, 107, 79, 0.32);
 }
 
 .service-card a.btn-pill:hover,
 .service-card a.btn-pill:focus {
-  background: #2ec95e;
-  box-shadow: 0 6px 20px rgba(61, 220, 110, 0.48);
-  color: #0b2318;
+  background: #245740;
+  box-shadow: 0 6px 20px rgba(47, 107, 79, 0.48);
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -644,16 +644,16 @@ a {
 
 .service-card-company-registration a,
 .service-card-company-registration a.btn-pill {
-  background: #f39b1e;
+  background: #2f6b4f;
   border-top-color: rgba(244, 251, 247, 0.44);
-  color: #f7fcfa;
+  color: #ffffff;
 }
 
 .service-card-company-registration a:hover,
 .service-card-company-registration a:focus,
 .service-card-company-registration a.btn-pill:hover,
 .service-card-company-registration a.btn-pill:focus {
-  background: #e78f17;
+  background: #245740;
   color: #ffffff;
 }
 
@@ -1602,6 +1602,53 @@ a {
   color: #1c382a;
 }
 
+.service-detail-body.email-security-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.email-security-body .service-detail-benefits-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  min-height: 21rem;
+}
+
+.email-security-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  min-height: 21rem;
+}
+
+.email-security-body .detail-block-title {
+  color: #20362b;
+}
+
+.email-security-body .detail-block-title::before {
+  background: linear-gradient(90deg, var(--accent-gold), #b1935a);
+}
+
+.email-security-body .detail-benefit-item {
+  background: #ffffff;
+  border-color: rgba(47, 107, 79, 0.12);
+}
+
+.email-security-body .detail-benefit-item span:last-child {
+  color: #314d3e;
+}
+
+.email-security-body .detail-benefit-check,
+.email-security-body .detail-benefit-check::after {
+  border-color: #cf8f49;
+}
+
+.email-security-body .detail-step-copy h3 {
+  color: #20362b;
+}
+
+.email-security-body .detail-step-copy p {
+  color: #5a6d62;
+}
+
 .service-detail-body.vat-registration-body {
   background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
   border-color: rgba(47, 107, 79, 0.14);
@@ -2131,6 +2178,69 @@ a {
   color: #314d3e;
 }
 
+.vat-registration-body .detail-benefits-accordion {
+  background: linear-gradient(180deg, #fbfdfc, #f4faf6);
+  border: 1px solid rgba(47, 107, 79, 0.16);
+  border-radius: 1.2rem;
+  overflow: clip;
+}
+
+.vat-registration-body .detail-benefits-summary {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 1rem 1.1rem;
+}
+
+.vat-registration-body .detail-benefits-summary::-webkit-details-marker {
+  display: none;
+}
+
+.vat-registration-body .detail-benefits-summary .detail-block-title {
+  margin: 0;
+}
+
+.vat-registration-body .detail-benefits-summary .detail-block-title::before {
+  background: none;
+  border-bottom: 2px solid #2f6b4f;
+  border-left: 2px solid #2f6b4f;
+  content: "";
+  height: 0.52rem;
+  margin-top: -0.12rem;
+  transform: rotate(-45deg);
+  transition: transform 0.24s ease;
+  width: 0.52rem;
+}
+
+.vat-registration-body .detail-benefits-accordion[open] .detail-benefits-summary .detail-block-title::before {
+  transform: rotate(135deg);
+}
+
+.vat-registration-body .detail-benefits-accordion .detail-benefit-list {
+  opacity: 0;
+  padding: 0 1.1rem 1.1rem;
+  transform: translateY(-8px);
+}
+
+.vat-registration-body .detail-benefits-accordion .detail-benefit-item {
+  gap: 0;
+}
+
+.vat-registration-body .detail-benefits-accordion .detail-benefit-check {
+  display: none;
+}
+
+.vat-registration-body .detail-benefits-accordion[open] .detail-benefit-list {
+  animation: vat-benefits-reveal 0.3s ease forwards;
+}
+
+.vat-registration-body .detail-benefits-summary:focus-visible {
+  outline: 2px solid rgba(47, 107, 79, 0.5);
+  outline-offset: -2px;
+}
+
 .payroll-hr-body .detail-benefit-item span:last-child {
   color: #314d3e;
 }
@@ -2146,6 +2256,17 @@ a {
 .vat-registration-body .detail-benefit-check,
 .vat-registration-body .detail-benefit-check::after {
   border-color: #cf8f49;
+}
+
+@keyframes vat-benefits-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .payroll-hr-body .detail-benefit-check,

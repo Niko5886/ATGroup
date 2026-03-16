@@ -14,6 +14,9 @@ import { logoDesignPage } from "../pages/logo-design.js";
 import { webDevelopmentPage } from "../pages/web-development.js";
 import { digitalMarketingPage } from "../pages/digital-marketing.js";
 import { microsoft365Page } from "../pages/microsoft-365.js";
+import { emailSecurityPage } from "../pages/email-security.js";
+import { aiIntegrationPage } from "../pages/ai-integration.js";
+import { processAutomationPage } from "../pages/process-automation.js";
 
 const routes = {
   "/": homePage,
@@ -31,7 +34,10 @@ const routes = {
   "/logo-design": logoDesignPage,
   "/web-development": webDevelopmentPage,
   "/digital-marketing": digitalMarketingPage,
-  "/microsoft-365": microsoft365Page
+  "/microsoft-365": microsoft365Page,
+  "/email-security": emailSecurityPage,
+  "/ai-integration": aiIntegrationPage,
+  "/process-automation": processAutomationPage
 };
 
 function resolvePathname(pathname) {
