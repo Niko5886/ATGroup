@@ -22,7 +22,7 @@ export function growthPage() {
         <a href="/logo-design" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card growth-card growth-card-web service-card-clickable" data-card-link="/web-development" tabindex="0" role="link" aria-label="Модерна Уеб Разработка">
+      <article class="service-card service-card-blue service-card-web-development service-card-clickable" data-card-link="/web-development" tabindex="0" role="link" aria-label="Модерна Уеб Разработка">
         ${renderServiceIcon("code")}
         <h3>Модерна Уеб Разработка</h3>
         <p>Изграждане на отзивчиви, бързи и удобни за потребителя уебсайтове с най-съвременни технологии и най-добри практики.</p>
