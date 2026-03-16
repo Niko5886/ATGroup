@@ -29,7 +29,7 @@ export function growthPage() {
         <a href="/web-development" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card growth-card growth-card-marketing service-card-clickable" data-card-link="/digital-marketing" tabindex="0" role="link" aria-label="Стратегии за Дигитален Маркетинг">
+      <article class="service-card service-card-blue service-card-digital-marketing service-card-clickable" data-card-link="/digital-marketing" tabindex="0" role="link" aria-label="Стратегии за Дигитален Маркетинг">
         ${renderServiceIcon("chartUp")}
         <h3>Стратегии за Дигитален Маркетинг</h3>
         <p>Разработване на маркетингови кампании, базирани на данни, които засилват онлайн присъствието ви и водят до измерим бизнес растеж.</p>
