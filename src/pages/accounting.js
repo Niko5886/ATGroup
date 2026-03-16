@@ -10,7 +10,7 @@ export function accountingPage() {
     ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
     ctaHref: "/contacts",
     ctaLabel: "Заявете Услуга",
-    backHref: "/home",
+    backHref: "/home#basics",
     backLabel: "Назад",
     heroClass: "accounting-hero",
     bodyClass: "accounting-body",

@@ -8,32 +8,32 @@ export function growthPage() {
     </section>
 
     <section class="service-grid service-grid-4 growth-grid">
-      <article class="service-card growth-card growth-card-brand">
+      <article class="service-card growth-card growth-card-brand service-card-clickable" data-card-link="/brand-identity" tabindex="0" role="link" aria-label="Създаване на Бранд Идентичност">
         ${renderServiceIcon("palette")}
         <h3>Създаване на Бранд Идентичност</h3>
         <p>Изграждане на уникална и запомняща се идентичност на марката, която резонира с вашата целева аудитория и се отличава на пазара.</p>
-        <a href="/contacts" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
+        <a href="/brand-identity" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card growth-card growth-card-logo">
+      <article class="service-card growth-card growth-card-logo service-card-clickable" data-card-link="/logo-design" tabindex="0" role="link" aria-label="Лого Дизайн">
         ${renderServiceIcon("sparkles")}
         <h3>Лого Дизайн</h3>
         <p>Дизайн на отличителни лога, които улавят същността на вашия бранд и създават трайни впечатления във всички платформи.</p>
-        <a href="/contacts" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
+        <a href="/logo-design" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card growth-card growth-card-web">
+      <article class="service-card growth-card growth-card-web service-card-clickable" data-card-link="/web-development" tabindex="0" role="link" aria-label="Модерна Уеб Разработка">
         ${renderServiceIcon("code")}
         <h3>Модерна Уеб Разработка</h3>
         <p>Изграждане на отзивчиви, бързи и удобни за потребителя уебсайтове с най-съвременни технологии и най-добри практики.</p>
-        <a href="/contacts" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
+        <a href="/web-development" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card growth-card growth-card-marketing">
+      <article class="service-card growth-card growth-card-marketing service-card-clickable" data-card-link="/digital-marketing" tabindex="0" role="link" aria-label="Стратегии за Дигитален Маркетинг">
         ${renderServiceIcon("chartUp")}
         <h3>Стратегии за Дигитален Маркетинг</h3>
         <p>Разработване на маркетингови кампании, базирани на данни, които засилват онлайн присъствието ви и водят до измерим бизнес растеж.</p>
-        <a href="/contacts" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
+        <a href="/digital-marketing" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
     </section>
   `;

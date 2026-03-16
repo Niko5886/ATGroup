@@ -9,6 +9,11 @@ import { vatRegistrationPage } from "../pages/vat-registration.js";
 import { payrollHrPage } from "../pages/payroll-hr.js";
 import { accountingPage } from "../pages/accounting.js";
 import { euProjectsPage } from "../pages/eu-projects.js";
+import { brandIdentityPage } from "../pages/brand-identity.js";
+import { logoDesignPage } from "../pages/logo-design.js";
+import { webDevelopmentPage } from "../pages/web-development.js";
+import { digitalMarketingPage } from "../pages/digital-marketing.js";
+import { microsoft365Page } from "../pages/microsoft-365.js";
 
 const routes = {
   "/": homePage,
@@ -21,7 +26,12 @@ const routes = {
   "/vat-registration": vatRegistrationPage,
   "/payroll-hr": payrollHrPage,
   "/accounting": accountingPage,
-  "/eu-projects": euProjectsPage
+  "/eu-projects": euProjectsPage,
+  "/brand-identity": brandIdentityPage,
+  "/logo-design": logoDesignPage,
+  "/web-development": webDevelopmentPage,
+  "/digital-marketing": digitalMarketingPage,
+  "/microsoft-365": microsoft365Page
 };
 
 function resolvePathname(pathname) {
