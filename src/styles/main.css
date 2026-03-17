@@ -4696,3 +4696,61 @@ body.modal-open {
     font-size: 1.7rem;
   }
 }
+
+/* Anchor offset fix for fixed header on tablet/mobile */
+@media (max-width: 991.98px) {
+  .story-section {
+    scroll-margin-top: 7.2rem;
+  }
+}
+
+/* Better tablet layout for 3-card sections */
+@media (max-width: 1199.98px) {
+  .service-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 575.98px) {
+  .service-grid-3,
+  .service-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Consistent horizontal rhythm between header/footer */
+.site-footer {
+  max-width: 1400px;
+  width: 93%;
+}
+
+/* Modal checkbox labels: wrapping + larger tap comfort */
+.contact-modal__options label {
+  align-items: flex-start;
+  line-height: 1.35;
+  min-height: 2.6rem;
+  white-space: normal;
+}
+
+.contact-modal__options label span {
+  overflow-wrap: anywhere;
+}
+
+/* Dynamic viewport-safe modal height */
+.contact-modal__dialog {
+  max-height: min(90dvh, 860px);
+}
+
+@supports not (height: 1dvh) {
+  .contact-modal__dialog {
+    max-height: min(90vh, 860px);
+  }
+}
+
+/* Reduce excessive card height on phones */
+@media (max-width: 575.98px) {
+  .service-card {
+    min-height: auto;
+    padding: 1.2rem 1rem;
+  }
+}
