@@ -205,7 +205,7 @@ a {
 }
 
 .site-content {
-  animation: fade-up 0.55s ease-out;
+  animation: fade-up 0.26s ease-out;
   min-height: 50vh;
   padding-top: 7.2rem;
 }
@@ -216,18 +216,37 @@ a {
 }
 
 .story-section {
+  contain-intrinsic-size: 1px 920px;
+  content-visibility: auto;
   scroll-margin-top: 7rem;
+}
+
+.story-section-hero {
+  contain-intrinsic-size: auto;
+  content-visibility: visible;
 }
 
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(32px) scale(0.986);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transform: translateY(14px) scale(0.995);
+  transition: opacity 0.28s ease, transform 0.28s ease;
 }
 
 .reveal-on-scroll.is-visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-content {
+    animation: none;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .hero-block {

@@ -7,6 +7,7 @@ let revealObserver;
 let triggerObserver;
 let sectionSpyObserver;
 let lastSyncedHomeSection;
+let backToTopTicking = false;
 
 function syncBackToTopState() {
   const backToTopButton = document.querySelector("[data-scroll-top]");
@@ -191,8 +192,9 @@ function initScrollReveal() {
         });
       },
       {
-        rootMargin: "0px 0px -8% 0px",
-        threshold: 0.2
+        // Reveal slightly before the section reaches viewport center.
+        rootMargin: "0px 0px 16% 0px",
+        threshold: 0.01
       }
     );
 
@@ -212,9 +214,9 @@ function initScrollReveal() {
         });
       },
       {
-        // Trigger late: the block must reach the lower-middle viewport zone first.
-        rootMargin: "0px 0px -45% 0px",
-        threshold: 0
+        // Trigger early to avoid perceived lag while scrolling.
+        rootMargin: "0px 0px 14% 0px",
+        threshold: 0.01
       }
     );
 
@@ -332,5 +334,13 @@ window.addEventListener("resize", () => {
 });
 
 window.addEventListener("scroll", () => {
-  syncBackToTopState();
+  if (backToTopTicking) {
+    return;
+  }
+
+  backToTopTicking = true;
+  requestAnimationFrame(() => {
+    syncBackToTopState();
+    backToTopTicking = false;
+  });
 });
