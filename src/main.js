@@ -48,6 +48,42 @@ function closeContactModal() {
   document.body.classList.remove("modal-open");
 }
 
+function syncActivityGroups(form, selectedActivity) {
+  const groups = Array.from(form.querySelectorAll(".contact-modal__options[data-activity-group]"));
+  if (!groups.length) {
+    return;
+  }
+
+  groups.forEach((group) => {
+    const isActive = selectedActivity && group.dataset.activityGroup === selectedActivity;
+    const isInactive = !isActive;
+
+    group.classList.toggle("is-inactive", isInactive);
+    group.setAttribute("aria-disabled", String(isInactive));
+
+    group.querySelectorAll("input[type='checkbox']").forEach((checkbox) => {
+      checkbox.disabled = isInactive;
+      if (isInactive) {
+        checkbox.checked = false;
+      }
+    });
+  });
+}
+
+function syncContactModalActivityState() {
+  const form = document.querySelector(".contact-modal__form");
+  if (!form) {
+    return;
+  }
+
+  const activitySelect = form.querySelector("select[name='activity']");
+  if (!activitySelect) {
+    return;
+  }
+
+  syncActivityGroups(form, activitySelect.value);
+}
+
 function updateNavIndicator() {
   const navList = document.querySelector(".at-nav-list");
   const indicator = navList?.querySelector(".nav-indicator");
@@ -319,6 +355,7 @@ function renderCurrentPath() {
   renderRoute(window.location.pathname);
   lastSyncedHomeSection = undefined;
   initHomeLazySections();
+  syncContactModalActivityState();
   initScrollReveal();
   initHomeSectionSpy();
   requestAnimationFrame(() => {
@@ -346,6 +383,7 @@ document.addEventListener("click", (event) => {
   if (openContactModalTrigger) {
     event.preventDefault();
     openContactModal();
+    syncContactModalActivityState();
 
     const mainNav = document.getElementById("mainNav");
     if (mainNav?.classList.contains("show") && window.bootstrap?.Collapse) {
@@ -421,6 +459,20 @@ document.addEventListener("submit", (event) => {
   // UI-only modal form for now: keep user on page after submit click.
   event.preventDefault();
   closeContactModal();
+});
+
+document.addEventListener("change", (event) => {
+  const activitySelect = event.target.closest(".contact-modal__form select[name='activity']");
+  if (!activitySelect) {
+    return;
+  }
+
+  const form = activitySelect.closest(".contact-modal__form");
+  if (!form) {
+    return;
+  }
+
+  syncActivityGroups(form, activitySelect.value);
 });
 
 window.addEventListener("resize", () => {

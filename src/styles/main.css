@@ -4307,6 +4307,21 @@ body.modal-open {
   accent-color: #2f6b4f;
 }
 
+.contact-modal__options.is-inactive {
+  opacity: 0.52;
+}
+
+.contact-modal__options.is-inactive legend {
+  color: #81948a;
+}
+
+.contact-modal__options.is-inactive label {
+  background: #f3f6f4;
+  border-color: rgba(47, 107, 79, 0.12);
+  color: #6f8378;
+  cursor: not-allowed;
+}
+
 .contact-modal__submit {
   background: linear-gradient(120deg, #2f6b4f, #27523f);
   border: none;

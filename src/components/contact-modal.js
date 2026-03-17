@@ -33,13 +33,13 @@ export function renderContactModal() {
             <span>Вид дейност *</span>
             <select name="activity" required>
               <option value="" selected disabled>Изберете услуга...</option>
-              <option value="Счетоводни услуги">Счетоводни услуги</option>
-              <option value="Технологични услуги">Технологични услуги</option>
-              <option value="Дигитален маркетинг">Дигитален маркетинг</option>
+              <option value="accounting">Счетоводни услуги</option>
+              <option value="technology">Технологични услуги</option>
+              <option value="marketing">Дигитален маркетинг</option>
             </select>
           </label>
 
-          <fieldset class="contact-modal__options">
+          <fieldset class="contact-modal__options" data-activity-group="accounting">
             <legend>Счетоводни услуги *</legend>
             <label><input type="checkbox" name="services" value="ДДС Регистрация" /> <span>ДДС Регистрация</span></label>
             <label><input type="checkbox" name="services" value="Счетоводство" /> <span>Счетоводство</span></label>
@@ -47,14 +47,14 @@ export function renderContactModal() {
             <label><input type="checkbox" name="services" value="ТРЗ и Личен Състав" /> <span>ТРЗ и Личен Състав</span></label>
           </fieldset>
 
-          <fieldset class="contact-modal__options">
+          <fieldset class="contact-modal__options" data-activity-group="technology">
             <legend>Технологични услуги *</legend>
             <label><input type="checkbox" name="tech-services" value="Автоматизация на бизнес процеси" /> <span>Автоматизация на бизнес процеси</span></label>
             <label><input type="checkbox" name="tech-services" value="М365 консултации" /> <span>М365 консултации</span></label>
             <label><input type="checkbox" name="tech-services" value="Имейл сигурност" /> <span>Имейл сигурност</span></label>
           </fieldset>
 
-          <fieldset class="contact-modal__options">
+          <fieldset class="contact-modal__options" data-activity-group="marketing">
             <legend>Дигитален маркетинг *</legend>
             <label><input type="checkbox" name="digital-services" value="Дигитален маркетинг" /> <span>Дигитален маркетинг</span></label>
             <label><input type="checkbox" name="digital-services" value="Бранд идентификация" /> <span>Бранд идентификация</span></label>
