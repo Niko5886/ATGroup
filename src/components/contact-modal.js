@@ -25,7 +25,7 @@ export function renderContactModal() {
             </label>
             <label class="contact-modal__field">
               <span>Телефон *</span>
-              <input type="tel" name="phone" placeholder="+359 888 123 456" inputmode="numeric" autocomplete="tel" pattern="^\+?[0-9\s()-]{7,20}$" />
+              <input type="tel" name="phone" placeholder="+359 888 123 456" inputmode="numeric" autocomplete="tel" pattern="^[+]?[0-9 ()-]{7,20}$" />
             </label>
           </div>
 
