@@ -9,6 +9,7 @@ import { vatRegistrationPage } from "../pages/vat-registration.js";
 import { payrollHrPage } from "../pages/payroll-hr.js";
 import { accountingPage } from "../pages/accounting.js";
 import { euProjectsPage } from "../pages/eu-projects.js";
+import { licensesPage } from "../pages/licenses.js";
 import { brandIdentityPage } from "../pages/brand-identity.js";
 import { logoDesignPage } from "../pages/logo-design.js";
 import { webDevelopmentPage } from "../pages/web-development.js";
@@ -30,6 +31,7 @@ const routes = {
   "/payroll-hr": payrollHrPage,
   "/accounting": accountingPage,
   "/eu-projects": euProjectsPage,
+  "/licenses": licensesPage,
   "/brand-identity": brandIdentityPage,
   "/logo-design": logoDesignPage,
   "/web-development": webDevelopmentPage,

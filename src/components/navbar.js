@@ -7,7 +7,7 @@ const navItems = [
 
 export function renderNavbar(activePath) {
   const normalizedPath = activePath === "/" ? "/home" : activePath;
-  const navActivePath = ["/company-registration", "/vat-registration", "/payroll-hr", "/accounting", "/eu-projects"].includes(normalizedPath)
+  const navActivePath = ["/company-registration", "/vat-registration", "/payroll-hr", "/accounting", "/eu-projects", "/licenses"].includes(normalizedPath)
     ? "/basics"
     : normalizedPath;
 

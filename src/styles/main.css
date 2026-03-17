@@ -1907,6 +1907,13 @@ a {
     url("../assets/images/%D1%80%D0%B5%D0%B3%D0%B8%D1%81%D1%82%D1%80%D0%B0%D1%86%D0%B8%D1%8F%20%D1%84%D0%B8%D1%80%D0%BC%D0%B8.jpg") center/cover no-repeat;
 }
 
+.service-detail-hero.licenses-hero {
+  background:
+    linear-gradient(132deg, rgba(18, 37, 29, 0.64), rgba(18, 37, 29, 0.76)),
+    radial-gradient(circle at 85% 14%, rgba(218, 182, 119, 0.26), transparent 52%),
+    url("../assets/images/productiv.jpg") center/cover no-repeat;
+}
+
 .service-detail-hero.company-registration-hero::before {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
@@ -1914,7 +1921,22 @@ a {
   opacity: 0.3;
 }
 
+.service-detail-hero.licenses-hero::before {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  opacity: 0.3;
+}
+
 .service-detail-hero.company-registration-hero::after {
+  background: linear-gradient(180deg, rgba(8, 19, 14, 0.08), rgba(8, 19, 14, 0.38));
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.service-detail-hero.licenses-hero::after {
   background: linear-gradient(180deg, rgba(8, 19, 14, 0.08), rgba(8, 19, 14, 0.38));
   content: "";
   inset: 0;
@@ -2005,6 +2027,12 @@ a {
 }
 
 .company-registration-hero .service-detail-cta {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
+  border: 1px solid rgba(255, 255, 255, 0.34);
+}
+
+.licenses-hero .service-detail-cta {
   backdrop-filter: blur(8px);
   background: linear-gradient(150deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.09));
   border: 1px solid rgba(255, 255, 255, 0.34);
@@ -3721,6 +3749,69 @@ a {
   background-position: center 44%;
 }
 
+.service-detail-body.licenses-body {
+  background: linear-gradient(180deg, #f7fbf8, #f2f8f3);
+  border-color: rgba(47, 107, 79, 0.14);
+}
+
+.licenses-body {
+  grid-template-areas:
+    "benefits media"
+    "process-media process";
+  align-items: stretch;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.92fr);
+  row-gap: 2.2rem;
+}
+
+.licenses-body .detail-benefits-column {
+  grid-area: benefits;
+}
+
+.licenses-body .detail-process-column {
+  grid-area: process;
+  background: linear-gradient(180deg, #fbfdfc, #f3f8f5);
+  border: 1px solid rgba(47, 107, 79, 0.14);
+  border-radius: 1.2rem;
+  padding: 1.2rem;
+}
+
+.licenses-body .service-detail-benefits-media,
+.licenses-body .service-detail-process-media {
+  box-shadow: 0 20px 34px rgba(23, 44, 34, 0.16);
+  display: block;
+  min-height: 21rem;
+}
+
+.licenses-body .service-detail-benefits-media {
+  grid-area: media;
+}
+
+.licenses-body .service-detail-process-media {
+  grid-area: process-media;
+}
+
+.licenses-body .service-detail-benefits-media::before,
+.licenses-body .service-detail-process-media::before {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(239, 246, 241, 0.82)),
+    radial-gradient(circle at 84% 16%, rgba(201, 169, 106, 0.2), transparent 48%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.licenses-body .service-detail-benefits-media::after,
+.licenses-body .service-detail-process-media::after {
+  background-image:
+    linear-gradient(rgba(47, 107, 79, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(47, 107, 79, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  content: "";
+  inset: 0;
+  opacity: 0.35;
+  position: absolute;
+}
+
 .detail-block-title {
   align-items: center;
   color: #20362b;
@@ -4613,6 +4704,21 @@ body.modal-open {
   .company-registration-body .service-detail-benefits-media,
   .company-registration-body .detail-process-column,
   .company-registration-body .service-detail-process-media {
+    min-height: 16rem;
+  }
+
+  .licenses-body {
+    grid-template-areas:
+      "benefits"
+      "media"
+      "process-media"
+      "process";
+    row-gap: 1.5rem;
+  }
+
+  .licenses-body .service-detail-benefits-media,
+  .licenses-body .detail-process-column,
+  .licenses-body .service-detail-process-media {
     min-height: 16rem;
   }
 

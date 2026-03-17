@@ -43,11 +43,11 @@ export function basicsPage() {
         <a href="/eu-projects" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
 
-      <article class="service-card service-card-blue service-card-coming-soon">
+      <article class="service-card service-card-blue service-card-coming-soon service-card-clickable" data-card-link="/licenses" tabindex="0" role="link" aria-label="Лицензи">
         ${renderServiceIcon("rocket")}
         <h3>Лицензи</h3>
         <p>Подготовка на техническа документация разрешителни и лицензи</p>
-        <a href="/contacts" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
+        <a href="/licenses" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
     </section>
   `;
