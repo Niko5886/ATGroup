@@ -82,7 +82,7 @@ export function renderServiceDetailPage({
         <aside class="service-detail-cta">
           <h2>${ctaTitle}</h2>
           <p>${ctaText}</p>
-          <a class="btn service-detail-cta-button" href="${ctaHref}" data-link>${ctaLabel}</a>
+          <a class="btn service-detail-cta-button" href="${ctaHref}" data-open-contact-modal>${ctaLabel}</a>
         </aside>
       </section>
 
