@@ -101,6 +101,41 @@ function sanitizePhoneValue(rawValue) {
   return sanitized;
 }
 
+function clearServicesValidity(form) {
+  const serviceCheckboxes = form.querySelectorAll(".contact-modal__options input[type='checkbox']");
+  serviceCheckboxes.forEach((checkbox) => checkbox.setCustomValidity(""));
+}
+
+function validateContactModalForm(form) {
+  clearServicesValidity(form);
+
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return false;
+  }
+
+  const activitySelect = form.querySelector("select[name='activity']");
+  const selectedActivity = activitySelect?.value;
+  if (!selectedActivity) {
+    form.reportValidity();
+    return false;
+  }
+
+  const activeGroup = form.querySelector(`.contact-modal__options[data-activity-group='${selectedActivity}']`);
+  const activeCheckboxes = Array.from(activeGroup?.querySelectorAll("input[type='checkbox']") ?? []);
+  const hasSelectedService = activeCheckboxes.some((checkbox) => checkbox.checked);
+
+  if (!hasSelectedService && activeCheckboxes.length > 0) {
+    const firstActiveCheckbox = activeCheckboxes[0];
+    firstActiveCheckbox.setCustomValidity("Моля, изберете поне една услуга.");
+    firstActiveCheckbox.reportValidity();
+    firstActiveCheckbox.focus();
+    return false;
+  }
+
+  return true;
+}
+
 function updateNavIndicator() {
   const navList = document.querySelector(".at-nav-list");
   const indicator = navList?.querySelector(".nav-indicator");
@@ -473,12 +508,22 @@ document.addEventListener("submit", (event) => {
     return;
   }
 
-  // UI-only modal form for now: keep user on page after submit click.
   event.preventDefault();
+
+  if (!validateContactModalForm(form)) {
+    return;
+  }
+
+  // UI-only modal form for now: keep user on page after submit click.
   closeContactModal();
 });
 
 document.addEventListener("change", (event) => {
+  const serviceCheckbox = event.target.closest(".contact-modal__options input[type='checkbox']");
+  if (serviceCheckbox) {
+    serviceCheckbox.setCustomValidity("");
+  }
+
   const activitySelect = event.target.closest(".contact-modal__form select[name='activity']");
   if (!activitySelect) {
     return;

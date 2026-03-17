@@ -44,12 +44,47 @@ function resolvePathname(pathname) {
   return routes[pathname] ? pathname : "/home";
 }
 
+function assertSafeTemplate(html) {
+  const htmlString = typeof html === "string" ? html : String(html ?? "");
+  const blockedPattern = /<\s*script\b|\bon\w+\s*=|javascript\s*:/i;
+
+  if (blockedPattern.test(htmlString)) {
+    throw new Error("Blocked potentially unsafe HTML content.");
+  }
+
+  return htmlString;
+}
+
+function getHashTarget(hash) {
+  if (!hash || !hash.startsWith("#")) {
+    return null;
+  }
+
+  let targetId;
+  try {
+    targetId = decodeURIComponent(hash.slice(1));
+  } catch {
+    return null;
+  }
+
+  const hasControlCharacters = Array.from(targetId).some((char) => {
+    const charCode = char.charCodeAt(0);
+    return charCode < 32 || charCode === 127;
+  });
+
+  if (!targetId || hasControlCharacters) {
+    return null;
+  }
+
+  return document.getElementById(targetId);
+}
+
 function scrollToHash(hash, smooth = true) {
   if (!hash) {
     return;
   }
 
-  const target = document.querySelector(hash);
+  const target = getHashTarget(hash);
   if (!target) {
     return;
   }
@@ -69,7 +104,8 @@ export function renderRoute(pathname) {
     window.history.replaceState({}, "", resolvedPath);
   }
 
-  app.innerHTML = renderPageLayout(pageRenderer(), resolvedPath);
+  const layoutMarkup = renderPageLayout(pageRenderer(), resolvedPath);
+  app.innerHTML = assertSafeTemplate(layoutMarkup);
 }
 
 export function navigateTo(targetHref) {

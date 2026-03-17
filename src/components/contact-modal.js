@@ -9,23 +9,23 @@ export function renderContactModal() {
         <h2 class="contact-modal__title" id="contactModalTitle">Стартъп Пакети</h2>
         <p class="contact-modal__subtitle">Попълнете формата, за да стартираме вашия бизнес с летящ старт.</p>
 
-        <form class="contact-modal__form" novalidate>
+        <form class="contact-modal__form">
           <div class="contact-modal__grid">
             <label class="contact-modal__field">
               <span>Име *</span>
-              <input type="text" name="name" placeholder="Вашето име" />
+              <input type="text" name="name" placeholder="Вашето име" required />
             </label>
             <label class="contact-modal__field">
               <span>Компания *</span>
-              <input type="text" name="company" placeholder="Име на фирмата" />
+              <input type="text" name="company" placeholder="Име на фирмата" required />
             </label>
             <label class="contact-modal__field">
               <span>Имейл *</span>
-              <input type="email" name="email" placeholder="name@company.com" />
+              <input type="email" name="email" placeholder="name@company.com" required />
             </label>
             <label class="contact-modal__field">
               <span>Телефон *</span>
-              <input type="tel" name="phone" placeholder="+359 888 123 456" inputmode="numeric" autocomplete="tel" pattern="^[+]?[0-9 ()-]{7,20}$" />
+              <input type="tel" name="phone" placeholder="+359 888 123 456" inputmode="numeric" autocomplete="tel" pattern="^[+]?[0-9 ()-]{7,20}$" required />
             </label>
           </div>
 

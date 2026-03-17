@@ -10,6 +10,17 @@ const homeSectionRenderers = {
   audience: audiencePage
 };
 
+function assertSafeTemplate(html) {
+  const htmlString = typeof html === "string" ? html : String(html ?? "");
+  const blockedPattern = /<\s*script\b|\bon\w+\s*=|javascript\s*:/i;
+
+  if (blockedPattern.test(htmlString)) {
+    throw new Error("Blocked potentially unsafe home section content.");
+  }
+
+  return htmlString;
+}
+
 function homeSectionShell(id, label) {
   return `
       <section id="${id}" class="story-section reveal-on-scroll home-lazy-section" data-home-lazy="${id}" data-loaded="false">
@@ -26,7 +37,7 @@ export function hydrateHomeSection(sectionId) {
     return false;
   }
 
-  section.innerHTML = renderer();
+  section.innerHTML = assertSafeTemplate(renderer());
   section.dataset.loaded = "true";
   section.classList.add("home-lazy-loaded");
   return true;
