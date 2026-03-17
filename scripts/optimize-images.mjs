@@ -30,18 +30,23 @@ async function collectImageFiles(dir) {
 async function optimizeFile(filePath) {
   const extension = path.extname(filePath).toLowerCase();
   const originalBuffer = await fs.readFile(filePath);
+  const pipeline = sharp(originalBuffer)
+    .rotate()
+    .resize({
+      width: 1920,
+      withoutEnlargement: true,
+      fit: "inside"
+    });
 
   let optimizedBuffer;
 
   if (extension === ".png") {
-    optimizedBuffer = await sharp(originalBuffer)
-      .rotate()
+    optimizedBuffer = await pipeline
       .png({ compressionLevel: 9, effort: 10, palette: true })
       .toBuffer();
   } else {
-    optimizedBuffer = await sharp(originalBuffer)
-      .rotate()
-      .jpeg({ quality: 72, mozjpeg: true, progressive: true, chromaSubsampling: "4:2:0" })
+    optimizedBuffer = await pipeline
+      .jpeg({ quality: 66, mozjpeg: true, progressive: true, chromaSubsampling: "4:2:0" })
       .toBuffer();
   }
 

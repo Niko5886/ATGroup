@@ -3,6 +3,35 @@ import { growthPage } from "./growth.js";
 import { futurePage } from "./future.js";
 import { audiencePage } from "./audience.js";
 
+const homeSectionRenderers = {
+  basics: basicsPage,
+  growth: growthPage,
+  future: futurePage,
+  audience: audiencePage
+};
+
+function homeSectionShell(id, label) {
+  return `
+      <section id="${id}" class="story-section reveal-on-scroll home-lazy-section" data-home-lazy="${id}" data-loaded="false">
+        <div class="home-section-skeleton" aria-hidden="true">Зарежда се: ${label}</div>
+      </section>
+  `;
+}
+
+export function hydrateHomeSection(sectionId) {
+  const section = document.querySelector(`.home-lazy-section[data-home-lazy="${sectionId}"]`);
+  const renderer = homeSectionRenderers[sectionId];
+
+  if (!section || !renderer || section.dataset.loaded === "true") {
+    return false;
+  }
+
+  section.innerHTML = renderer();
+  section.dataset.loaded = "true";
+  section.classList.add("home-lazy-loaded");
+  return true;
+}
+
 export function homePage() {
   return `
     <div class="home-stack">
@@ -16,21 +45,12 @@ export function homePage() {
         </section>
       </section>
 
-      <section id="basics" class="story-section reveal-on-scroll">
-        ${basicsPage()}
+      <section id="basics" class="story-section reveal-on-scroll home-lazy-section home-lazy-loaded" data-home-lazy="basics" data-loaded="true">
+        ${homeSectionRenderers.basics()}
       </section>
-
-      <section id="growth" class="story-section reveal-on-scroll">
-        ${growthPage()}
-      </section>
-
-      <section id="future" class="story-section reveal-on-scroll">
-        ${futurePage()}
-      </section>
-
-      <section id="audience" class="story-section reveal-on-scroll">
-        ${audiencePage()}
-      </section>
+      ${homeSectionShell("growth", "Растеж")}
+      ${homeSectionShell("future", "Бъдеще")}
+      ${homeSectionShell("audience", "За кого")}
     </div>
   `;
 }

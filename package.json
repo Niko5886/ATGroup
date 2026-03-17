@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "npm run optimize:images",
     "dev": "vite",
     "optimize:images": "node scripts/optimize-images.mjs",
     "prebuild": "npm run optimize:images",

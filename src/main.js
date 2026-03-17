@@ -2,12 +2,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./styles/main.css";
 import { navigateTo, renderRoute, scrollToCurrentHash } from "./app/router.js";
+import { hydrateHomeSection } from "./pages/home.js";
 
 let revealObserver;
 let triggerObserver;
 let sectionSpyObserver;
+let homeLazyObserver;
 let lastSyncedHomeSection;
 let backToTopTicking = false;
+
+function isHomeRoute() {
+  const pathname = window.location.pathname;
+  // If we are on any of these strictly, or if we have home lazy sections in the DOM, it's home.
+  return pathname === "/home" || pathname === "/" || document.querySelector(".home-lazy-section") !== null;
+}
 
 function syncBackToTopState() {
   const backToTopButton = document.querySelector("[data-scroll-top]");
@@ -64,7 +72,7 @@ function updateNavIndicator() {
 }
 
 function syncHomeHash(sectionId) {
-  if (window.location.pathname !== "/home" || !sectionId) {
+  if (!isHomeRoute() || !sectionId) {
     return;
   }
 
@@ -84,7 +92,7 @@ function syncHomeHash(sectionId) {
 }
 
 function setHomeNavActiveSection(sectionId) {
-  if (window.location.pathname !== "/home") {
+  if (!isHomeRoute()) {
     return;
   }
 
@@ -108,7 +116,7 @@ function initHomeSectionSpy() {
     sectionSpyObserver.disconnect();
   }
 
-  if (window.location.pathname !== "/home") {
+  if (!isHomeRoute()) {
     return;
   }
 
@@ -147,8 +155,8 @@ function initHomeSectionSpy() {
       }
     },
     {
-      threshold: [0.2, 0.35, 0.5, 0.7],
-      rootMargin: "-20% 0px -45% 0px"
+      threshold: [0.01, 0.15, 0.35, 0.55],
+      rootMargin: "-10% 0px -50% 0px"
     }
   );
 
@@ -224,9 +232,93 @@ function initScrollReveal() {
   }
 }
 
+function initHomeLazySections() {
+  if (homeLazyObserver) {
+    homeLazyObserver.disconnect();
+    homeLazyObserver = undefined;
+  }
+
+  if (!isHomeRoute()) {
+    return;
+  }
+
+  const lazySections = Array.from(document.querySelectorAll(".home-lazy-section[data-loaded='false']"));
+  if (!lazySections.length) {
+    return;
+  }
+
+  const hashTarget = window.location.hash ? window.location.hash.slice(1) : "";
+  const eagerSections = new Set(["basics"]);
+
+  if (hashTarget) {
+    eagerSections.add(hashTarget);
+  }
+
+  eagerSections.forEach((sectionId) => {
+    hydrateHomeSection(sectionId);
+  });
+
+  if (!window.IntersectionObserver) {
+    ["growth", "future", "audience"].forEach((sectionId) => hydrateHomeSection(sectionId));
+    return;
+  }
+
+  homeLazyObserver = new IntersectionObserver(
+    (entries, observer) => {
+      let hasHydrated = false;
+
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const sectionId = entry.target.getAttribute("data-home-lazy");
+        if (!sectionId) {
+          return;
+        }
+
+        const hydrated = hydrateHomeSection(sectionId);
+        observer.unobserve(entry.target);
+
+        if (hydrated) {
+          hasHydrated = true;
+        }
+      });
+
+      if (hasHydrated) {
+        initScrollReveal();
+        initHomeSectionSpy();
+      }
+    },
+    {
+      rootMargin: "100% 0px 100% 0px", // Aggressive root margin for preload
+      threshold: 0
+    }
+  );
+
+  lazySections.forEach((section) => {
+    if (section.dataset.loaded !== "true") {
+      homeLazyObserver.observe(section);
+    }
+  });
+
+  // Bulletproof fallback: if they haven't loaded within a reasonable time, force them.
+  setTimeout(() => {
+    const unhydrated = Array.from(document.querySelectorAll(".home-lazy-section[data-loaded='false']"));
+    if (unhydrated.length > 0) {
+      unhydrated.forEach((section) => {
+        hydrateHomeSection(section.getAttribute("data-home-lazy"));
+      });
+      initScrollReveal();
+      initHomeSectionSpy();
+    }
+  }, 1000); // 1 second fallback to ensure nothing is ever stuck on "Зарежда се"
+}
+
 function renderCurrentPath() {
   renderRoute(window.location.pathname);
   lastSyncedHomeSection = undefined;
+  initHomeLazySections();
   initScrollReveal();
   initHomeSectionSpy();
   requestAnimationFrame(() => {
@@ -280,6 +372,7 @@ document.addEventListener("click", (event) => {
 
   if (!link && card) {
     navigateTo(card.getAttribute("data-card-link"));
+    initHomeLazySections();
     initScrollReveal();
     initHomeSectionSpy();
     return;
@@ -291,6 +384,7 @@ document.addEventListener("click", (event) => {
 
   event.preventDefault();
   navigateTo(link.getAttribute("href"));
+  initHomeLazySections();
   initScrollReveal();
   initHomeSectionSpy();
 
