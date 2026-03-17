@@ -23,7 +23,7 @@ export function audiencePage() {
           <li>Бърза регистрация</li>
           <li>Модерно дигитално присъствие</li>
         </ul>
-        <a class="btn audience-btn" href="/basics" data-link>Разгледайте стартъп пакети</a>
+        <a class="btn audience-btn" data-open-contact-modal>Разгледайте стартъп пакети</a>
       </article>
 
       <article class="audience-card">
@@ -41,7 +41,7 @@ export function audiencePage() {
           <li>Сигурност и съответствие</li>
           <li>Постоянна поддръжка и оптимизация</li>
         </ul>
-        <a class="btn audience-btn" href="/future" data-link>Заявете дигитален одит</a>
+        <a class="btn audience-btn" data-open-contact-modal>Заявете дигитален одит</a>
       </article>
     </section>
   `;

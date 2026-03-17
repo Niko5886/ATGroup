@@ -1714,12 +1714,7 @@ a {
 }
 
 .audience-accent {
-  background: linear-gradient(120deg, var(--accent-gold), #b1935a);
-  border-radius: 999px;
-  display: block;
-  height: 0.36rem;
-  margin-bottom: 1rem;
-  width: 5rem;
+  display: none;
 }
 
 .audience-icon {
