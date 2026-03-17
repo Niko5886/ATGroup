@@ -1,6 +1,6 @@
 export function renderContactModal() {
   return `
-    <div class="contact-modal" id="contactModal" data-contact-modal aria-hidden="true">
+    <div class="contact-modal" id="contactModal" data-contact-modal inert>
       <div class="contact-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
         <button class="contact-modal__close" type="button" aria-label="Затвори" data-close-contact-modal>
           <span aria-hidden="true">\u00d7</span>

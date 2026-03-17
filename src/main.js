@@ -33,7 +33,7 @@ function openContactModal() {
   }
 
   modal.classList.add("is-open");
-  modal.setAttribute("aria-hidden", "false");
+  modal.removeAttribute("inert");
   document.body.classList.add("modal-open");
 }
 
@@ -44,7 +44,7 @@ function closeContactModal() {
   }
 
   modal.classList.remove("is-open");
-  modal.setAttribute("aria-hidden", "true");
+  modal.setAttribute("inert", "");
   document.body.classList.remove("modal-open");
 }
 

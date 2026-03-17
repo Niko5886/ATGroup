@@ -1701,6 +1701,8 @@ a {
   background: linear-gradient(160deg, #ffffff, #edf5ef);
   border: 1px solid var(--line-soft);
   border-radius: 1.1rem;
+  display: flex;
+  flex-direction: column;
   padding: 2rem;
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
@@ -1782,7 +1784,7 @@ a {
   color: #fff;
   display: block;
   font-weight: 700;
-  margin-top: 1.6rem;
+  margin-top: auto;
   padding: 0.82rem 1rem;
   text-align: center;
 }
