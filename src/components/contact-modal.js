@@ -33,7 +33,7 @@ export function renderContactModal() {
             <span>Вид дейност *</span>
             <select name="activity" required>
               <option value="" selected disabled>Изберете услуга...</option>
-              <option value="Вид дейност">Вид дейност</option>
+              <option value="Счетоводни услуги">Счетоводни услуги</option>
               <option value="Технологични услуги">Технологични услуги</option>
               <option value="Дигитален маркетинг">Дигитален маркетинг</option>
             </select>
