@@ -4674,7 +4674,13 @@ body.modal-open {
   }
 
   .brand-identity-body,
-  .logo-design-body {
+  .logo-design-body,
+  .web-development-body,
+  .digital-marketing-body,
+  .microsoft-365-body,
+  .email-security-body,
+  .ai-integration-body,
+  .process-automation-body {
     grid-template-areas:
       "benefits"
       "media"
@@ -4688,7 +4694,25 @@ body.modal-open {
   .brand-identity-body .detail-process-column,
   .logo-design-body .service-detail-benefits-media,
   .logo-design-body .service-detail-process-media,
-  .logo-design-body .detail-process-column {
+  .logo-design-body .detail-process-column,
+  .web-development-body .service-detail-benefits-media,
+  .web-development-body .service-detail-process-media,
+  .web-development-body .detail-process-column,
+  .digital-marketing-body .service-detail-benefits-media,
+  .digital-marketing-body .service-detail-process-media,
+  .digital-marketing-body .detail-process-column,
+  .microsoft-365-body .service-detail-benefits-media,
+  .microsoft-365-body .service-detail-process-media,
+  .microsoft-365-body .detail-process-column,
+  .email-security-body .service-detail-benefits-media,
+  .email-security-body .service-detail-process-media,
+  .email-security-body .detail-process-column,
+  .ai-integration-body .service-detail-benefits-media,
+  .ai-integration-body .service-detail-process-media,
+  .ai-integration-body .detail-process-column,
+  .process-automation-body .service-detail-benefits-media,
+  .process-automation-body .service-detail-process-media,
+  .process-automation-body .detail-process-column {
     min-height: 16rem;
   }
 
