@@ -84,6 +84,23 @@ function syncContactModalActivityState() {
   syncActivityGroups(form, activitySelect.value);
 }
 
+function sanitizePhoneValue(rawValue) {
+  if (!rawValue) {
+    return "";
+  }
+
+  const startsWithPlus = rawValue.trim().startsWith("+");
+  let sanitized = rawValue.replace(/[^\d+\s()-]/g, "");
+
+  // Keep at most one plus sign and only at the beginning.
+  sanitized = sanitized.replace(/\+/g, "");
+  if (startsWithPlus) {
+    sanitized = `+${sanitized}`;
+  }
+
+  return sanitized;
+}
+
 function updateNavIndicator() {
   const navList = document.querySelector(".at-nav-list");
   const indicator = navList?.querySelector(".nav-indicator");
@@ -473,6 +490,18 @@ document.addEventListener("change", (event) => {
   }
 
   syncActivityGroups(form, activitySelect.value);
+});
+
+document.addEventListener("input", (event) => {
+  const phoneInput = event.target.closest(".contact-modal__form input[name='phone']");
+  if (!phoneInput) {
+    return;
+  }
+
+  const sanitizedValue = sanitizePhoneValue(phoneInput.value);
+  if (sanitizedValue !== phoneInput.value) {
+    phoneInput.value = sanitizedValue;
+  }
 });
 
 window.addEventListener("resize", () => {
