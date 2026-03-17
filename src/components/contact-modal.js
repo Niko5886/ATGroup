@@ -30,19 +30,35 @@ export function renderContactModal() {
           </div>
 
           <label class="contact-modal__field contact-modal__field--full">
-            <span>Вид дейност</span>
-            <input type="text" name="activity" placeholder="Изберете правна форма..." />
+            <span>Вид дейност *</span>
+            <select name="activity" required>
+              <option value="" selected disabled>Изберете услуга...</option>
+              <option value="Вид дейност">Вид дейност</option>
+              <option value="Технологични услуги">Технологични услуги</option>
+              <option value="Дигитален маркетинг">Дигитален маркетинг</option>
+            </select>
           </label>
 
           <fieldset class="contact-modal__options">
-            <legend>Услуги *</legend>
-            <label><input type="checkbox" name="services" value="Регистрация на фирма" /> <span>Регистрация на фирма</span></label>
+            <legend>Счетоводни услуги *</legend>
             <label><input type="checkbox" name="services" value="ДДС Регистрация" /> <span>ДДС Регистрация</span></label>
-            <label><input type="checkbox" name="services" value="ТРЗ и Личен Състав" /> <span>ТРЗ и Личен Състав</span></label>
             <label><input type="checkbox" name="services" value="Счетоводство" /> <span>Счетоводство</span></label>
-            <label><input type="checkbox" name="services" value="Бранд Идентичност" /> <span>Бранд Идентичност</span></label>
-            <label><input type="checkbox" name="services" value="Web Разработка" /> <span>Web Разработка</span></label>
-            <label><input type="checkbox" name="services" value="Дигитален Маркетинг" /> <span>Дигитален Маркетинг</span></label>
+            <label><input type="checkbox" name="services" value="Регистрация на фирма" /> <span>Регистрация на фирма</span></label>
+            <label><input type="checkbox" name="services" value="ТРЗ и Личен Състав" /> <span>ТРЗ и Личен Състав</span></label>
+          </fieldset>
+
+          <fieldset class="contact-modal__options">
+            <legend>Технологични услуги *</legend>
+            <label><input type="checkbox" name="tech-services" value="Автоматизация на бизнес процеси" /> <span>Автоматизация на бизнес процеси</span></label>
+            <label><input type="checkbox" name="tech-services" value="М365 консултации" /> <span>М365 консултации</span></label>
+            <label><input type="checkbox" name="tech-services" value="Имейл сигурност" /> <span>Имейл сигурност</span></label>
+          </fieldset>
+
+          <fieldset class="contact-modal__options">
+            <legend>Дигитален маркетинг *</legend>
+            <label><input type="checkbox" name="digital-services" value="Дигитален маркетинг" /> <span>Дигитален маркетинг</span></label>
+            <label><input type="checkbox" name="digital-services" value="Бранд идентификация" /> <span>Бранд идентификация</span></label>
+            <label><input type="checkbox" name="digital-services" value="Графичен дизайн" /> <span>Графичен дизайн</span></label>
           </fieldset>
 
           <label class="contact-modal__field contact-modal__field--full">

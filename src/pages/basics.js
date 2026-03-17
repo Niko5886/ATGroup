@@ -46,6 +46,7 @@ export function basicsPage() {
       <article class="service-card service-card-blue service-card-coming-soon">
         ${renderServiceIcon("rocket")}
         <h3>Лицензи</h3>
+        <p>Подготовка на техническа документация разрешителни и лицензи</p>
         <a href="/contacts" class="btn-pill" data-link>РАЗБЕРИ ПОВЕЧЕ</a>
       </article>
     </section>
