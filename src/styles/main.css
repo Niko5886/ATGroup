@@ -1761,7 +1761,7 @@ a {
 
 .audience-card ul {
   color: var(--text-soft);
-  margin: 0;
+  margin: 0 0 1.25rem;
   padding-left: 1.3rem;
 }
 
@@ -2022,8 +2022,13 @@ a {
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 1.25rem;
+  box-sizing: border-box;
+  justify-self: stretch;
+  margin: 0;
+  max-width: none;
   padding: 1.5rem;
   box-shadow: 0 16px 30px rgba(10, 24, 18, 0.18);
+  width: 100%;
 }
 
 .company-registration-hero .service-detail-cta {
@@ -4198,12 +4203,18 @@ a {
   font-size: 1.45rem;
   font-weight: 800;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .detail-step-copy p {
   color: #5a6d62;
   line-height: 1.6;
   margin: 0.45rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.detail-step-copy {
+  min-width: 0;
 }
 
 .site-footer {
@@ -4684,7 +4695,7 @@ body.modal-open {
   }
 
   .site-content {
-    padding-top: 6.6rem;
+    padding-top: 7.4rem;
   }
 
   .service-detail-hero,
