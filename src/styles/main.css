@@ -1962,6 +1962,7 @@ a {
 
 .service-detail-hero-main {
   align-self: start;
+  min-width: 0;
   max-width: 46rem;
 }
 
@@ -2007,6 +2008,7 @@ a {
   font-weight: 800;
   line-height: 1.04;
   margin: 0;
+  overflow-wrap: anywhere;
 }
 
 .service-detail-description {
@@ -2015,6 +2017,7 @@ a {
   line-height: 1.7;
   margin: 1.5rem 0 0;
   max-width: 42rem;
+  overflow-wrap: anywhere;
 }
 
 .service-detail-cta {
@@ -4703,6 +4706,12 @@ body.modal-open {
     padding: 1.4rem;
   }
 
+  .service-detail-cta {
+    margin-inline: 0;
+    max-width: none;
+    width: 100%;
+  }
+
   .company-registration-body {
     grid-template-areas:
       "benefits"
@@ -4859,6 +4868,15 @@ body.modal-open {
   .service-grid-3,
   .service-grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .service-detail-hero {
+    padding: 1.2rem;
+  }
+
+  .service-detail-cta {
+    margin-inline: 0;
+    width: 100%;
   }
 }
 
