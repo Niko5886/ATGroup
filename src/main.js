@@ -10,6 +10,7 @@ let sectionSpyObserver;
 let homeLazyObserver;
 let lastSyncedHomeSection;
 let backToTopTicking = false;
+const HOME_RETURN_SCROLL_KEY = "at:home-return-scroll-y";
 
 function isHomeRoute() {
   const pathname = window.location.pathname;
@@ -24,6 +25,57 @@ function syncBackToTopState() {
   }
 
   backToTopButton.classList.toggle("is-visible", window.scrollY > 360);
+}
+
+function storeHomeReturnScroll(targetHref, triggerElement) {
+  if (!isHomeRoute() || !targetHref || !triggerElement) {
+    return;
+  }
+
+  const fromServiceCard = Boolean(
+    triggerElement.closest(".service-card") || triggerElement.closest("[data-card-link]")
+  );
+  if (!fromServiceCard) {
+    return;
+  }
+
+  let targetPath = "";
+  try {
+    targetPath = new URL(targetHref, window.location.origin).pathname;
+  } catch {
+    return;
+  }
+
+  if (targetPath === "/" || targetPath === "/home") {
+    return;
+  }
+
+  sessionStorage.setItem(HOME_RETURN_SCROLL_KEY, String(window.scrollY));
+}
+
+function restoreHomeReturnScroll() {
+  if (!isHomeRoute()) {
+    return false;
+  }
+
+  const storedScroll = sessionStorage.getItem(HOME_RETURN_SCROLL_KEY);
+  if (!storedScroll) {
+    return false;
+  }
+
+  sessionStorage.removeItem(HOME_RETURN_SCROLL_KEY);
+
+  const scrollY = Number.parseFloat(storedScroll);
+  if (!Number.isFinite(scrollY) || scrollY < 0) {
+    return false;
+  }
+
+  requestAnimationFrame(() => {
+    window.scrollTo({ top: scrollY, behavior: "auto" });
+    syncBackToTopState();
+  });
+
+  return true;
 }
 
 function openContactModal() {
@@ -414,7 +466,11 @@ function renderCurrentPath() {
     updateNavIndicator();
     syncBackToTopState();
   });
-  scrollToCurrentHash();
+
+  const restoredHomeScroll = restoreHomeReturnScroll();
+  if (!restoredHomeScroll) {
+    scrollToCurrentHash();
+  }
 }
 
 renderCurrentPath();
@@ -461,10 +517,13 @@ document.addEventListener("click", (event) => {
   const card = event.target.closest("[data-card-link]");
 
   if (!link && card) {
-    navigateTo(card.getAttribute("data-card-link"));
+    const cardTargetHref = card.getAttribute("data-card-link");
+    storeHomeReturnScroll(cardTargetHref, card);
+    navigateTo(cardTargetHref);
     initHomeLazySections();
     initScrollReveal();
     initHomeSectionSpy();
+    restoreHomeReturnScroll();
     return;
   }
 
@@ -473,10 +532,13 @@ document.addEventListener("click", (event) => {
   }
 
   event.preventDefault();
-  navigateTo(link.getAttribute("href"));
+  const linkTargetHref = link.getAttribute("href");
+  storeHomeReturnScroll(linkTargetHref, link);
+  navigateTo(linkTargetHref);
   initHomeLazySections();
   initScrollReveal();
   initHomeSectionSpy();
+  restoreHomeReturnScroll();
 
   const mainNav = document.getElementById("mainNav");
   if (mainNav?.classList.contains("show") && window.bootstrap?.Collapse) {
@@ -497,9 +559,13 @@ document.addEventListener("keydown", (event) => {
   }
 
   event.preventDefault();
-  navigateTo(card.getAttribute("data-card-link"));
+  const cardTargetHref = card.getAttribute("data-card-link");
+  storeHomeReturnScroll(cardTargetHref, card);
+  navigateTo(cardTargetHref);
+  initHomeLazySections();
   initScrollReveal();
   initHomeSectionSpy();
+  restoreHomeReturnScroll();
 });
 
 document.addEventListener("submit", (event) => {
