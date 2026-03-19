@@ -101,26 +101,6 @@ const SERVICE_ICONS = {
   `
 };
 
-const SOCIAL_ICONS = {
-  linkedin: `
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M7 9v8M7 7a1.2 1.2 0 1 0 0-2.4A1.2 1.2 0 0 0 7 7zM11 17V9h3v1.4A3.3 3.3 0 0 1 17 8.8c2 0 3 1.2 3 3.7V17h-3v-4c0-1.1-.4-1.8-1.4-1.8-1 0-1.6.7-1.6 1.8v4z"></path>
-    </svg>
-  `,
-  facebook: `
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <path d="M14 8h2V5h-2c-2 0-3 1.3-3 3.3V10H9v2.8h2V19h3v-6.2h2.2L17 10h-3V8.6c0-.4.2-.6.6-.6z"></path>
-    </svg>
-  `,
-  instagram: `
-    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-      <rect x="4" y="4" width="16" height="16" rx="4"></rect>
-      <circle cx="12" cy="12" r="3.5"></circle>
-      <circle cx="16.6" cy="7.4" r="1"></circle>
-    </svg>
-  `
-};
-
 export function renderServiceIcon(name, extraClass = "") {
   const icon = SERVICE_ICONS[name] || SERVICE_ICONS.briefcase;
   return `<span class="card-icon ${extraClass}" aria-hidden="true">${icon}</span>`;
@@ -133,9 +113,4 @@ export function renderAudienceIcon(name) {
 
 export function renderHeroIllustration() {
   return `<span class="hero-illustration" aria-hidden="true">${SERVICE_ICONS.heroSpark}</span>`;
-}
-
-export function renderSocialIcon(name) {
-  const icon = SOCIAL_ICONS[name] || SOCIAL_ICONS.linkedin;
-  return `<span class="social-chip" aria-hidden="true">${icon}</span>`;
 }

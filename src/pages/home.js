@@ -68,6 +68,14 @@ export function homePage() {
       ${homeSectionShell("growth", "Растеж")}
       ${homeSectionShell("future", "Бъдеще")}
       ${homeSectionShell("audience", "За кого")}
+      <section id="why-us" class="story-section reveal-on-scroll why-us-section">
+        <div class="why-us-card">
+          <h2 class="why-us-title">Защо да изберете партньорството между ИНТЕЛЛЕКТ и НАЙМЕРИКС?</h2>
+          <p class="why-us-text">
+            Повечето фирми трябва да координират отделно своите счетоводители, адвокати и ИТ специалисти. Ние работим в синхрон. Когато НАЙМЕРИКС ЕООД внедрява AI решение за вашия онлайн магазин, ИНТЕЛЛЕКТ ЕООД вече е проверил правната рамка и данъчното облагане. Спестяваме ви време, риск и излишни разходи.
+          </p>
+        </div>
+      </section>
     </div>
   `;
 }

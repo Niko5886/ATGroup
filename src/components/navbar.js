@@ -4,7 +4,8 @@ const navItems = [
   { label: "Начало", href: "/home", homeHref: "/home#home-top" },
   { label: "Основи", href: "/basics", homeHref: "/home#basics" },
   { label: "Растеж", href: "/growth", homeHref: "/home#growth" },
-  { label: "Бъдеще", href: "/future", homeHref: "/home#future" }
+  { label: "Бъдеще", href: "/future", homeHref: "/home#future" },
+  { label: "Защо нас", href: "/home#why-us", homeHref: "/home#why-us" }
 ];
 
 export function renderNavbar(activePath) {

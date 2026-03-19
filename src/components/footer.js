@@ -1,18 +1,15 @@
-import { renderSocialIcon } from "./icons.js";
-
 export function renderFooter() {
   return `
     <footer class="site-footer mt-5">
-      <div class="row g-4">
-        <div class="col-12 col-lg-4">
+      <div class="footer-grid">
+        <div class="footer-col">
           <h3 class="footer-brand">AT GROUP</h3>
-          <p class="footer-subtitle">Стратегически алианс за бизнес растеж</p>
           <p class="footer-text">
-            Комбиниране на счетоводно съвършенство с дигитални иновации за подпомагане на бизнеса в България и отвъд.
+            Това партньорство е стратегически алианс между ИНТЕЛЛЕКТ ЕООД и НАЙМЕРИКС ЕООД, създаден да предложи затворен цикъл от услуги за съвременния бизнес.
           </p>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="footer-col">
           <h4 class="footer-title">Бързи Връзки</h4>
           <ul class="footer-links">
             <li><a href="/basics" data-link>Основни Услуги</a></li>
@@ -22,7 +19,7 @@ export function renderFooter() {
           </ul>
         </div>
 
-        <div class="col-12 col-md-4 col-lg-3">
+        <div class="footer-col">
           <h4 class="footer-title">Контакти</h4>
           <ul class="footer-contact">
             <li>info@intellectnymerix.bg</li>
@@ -30,18 +27,9 @@ export function renderFooter() {
             <li>Русе, България</li>
           </ul>
         </div>
-
-        <div class="col-12 col-md-4 col-lg-2">
-          <h4 class="footer-title">Последвайте ни</h4>
-          <div class="social-row">
-            ${renderSocialIcon("linkedin")}
-            ${renderSocialIcon("facebook")}
-            ${renderSocialIcon("instagram")}
-          </div>
-        </div>
       </div>
 
-      <div class="footer-legal">© 2026 Nikolay Stoyanov & Nymerix. Всички права запазени.</div>
+      <div class="footer-legal">© 2026 Intellect & Nymerix | Всички права запазени.</div>
     </footer>
   `;
 }
