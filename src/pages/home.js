@@ -49,9 +49,9 @@ export function homePage() {
       <section id="home-top" class="story-section story-section-hero is-visible">
         <section class="hero-block">
           <p class="eyebrow">AT GROUP</p>
-          <h1 class="hero-title">Повишете вашето <span>цифрово присъствие</span></h1>
+          <h1 class="hero-title">Изберете вашия <span>надежден партньор за цялостен бизнес успех!</span></h1>
           <p class="hero-lead">
-            Комбиниране на доказания опит на Intellect в счетоводните и правни услуги с иновативните дигитални и AI решения на Nymerix за осигуряване на цялостна бизнес подкрепа в България и отвъд.
+            Обединяваме експертния опит на „ИНТЕЛЛЕКТ“ ЕООД в счетоводните и правни услуги с иновативните AI и дигитални решения на „НАЙМЕРИКС“ ЕООД. Осигуряваме стабилност и растеж за вашия бизнес в България и на международния пазар.
           </p>
         </section>
       </section>
