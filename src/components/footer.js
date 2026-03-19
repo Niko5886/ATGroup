@@ -1,3 +1,5 @@
+import { t } from "../i18n/translations.js";
+
 export function renderFooter() {
   return `
     <footer class="site-footer mt-5">
@@ -5,31 +7,31 @@ export function renderFooter() {
         <div class="footer-col">
           <h3 class="footer-brand">AT GROUP</h3>
           <p class="footer-text">
-            Това партньорство е стратегически алианс между ИНТЕЛЛЕКТ ЕООД и НАЙМЕРИКС ЕООД, създаден да предложи затворен цикъл от услуги за съвременния бизнес.
+            ${t("footer.brandDesc")}
           </p>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-title">Бързи Връзки</h4>
+          <h4 class="footer-title">${t("footer.quickLinks")}</h4>
           <ul class="footer-links">
-            <li><a href="/basics" data-link>Основни Услуги</a></li>
-            <li><a href="/growth" data-link>Услуги за Растеж</a></li>
-            <li><a href="/future" data-link>Технологични Услуги</a></li>
-            <li><a href="/growth" data-link>Кого Обслужваме</a></li>
+            <li><a href="/basics" data-link>${t("footer.servicesOverview")}</a></li>
+            <li><a href="/growth" data-link>${t("footer.growthServices")}</a></li>
+            <li><a href="/future" data-link>${t("footer.techServices")}</a></li>
+            <li><a href="/growth" data-link>${t("footer.whoWeServe")}</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-title">Контакти</h4>
+          <h4 class="footer-title">${t("footer.contacts")}</h4>
           <ul class="footer-contact">
             <li>nymerix.ltd@gmail.com</li>
             <li>+359 988 855 911</li>
-            <li>Русе, България</li>
+            <li>${t("footer.address")}</li>
           </ul>
         </div>
       </div>
 
-      <div class="footer-legal">© 2026 Intellect & Nymerix | Всички права запазени.</div>
+      <div class="footer-legal">${t("footer.rights")}</div>
     </footer>
   `;
 }

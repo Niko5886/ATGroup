@@ -479,6 +479,16 @@ window.addEventListener("popstate", () => {
   renderCurrentPath();
 });
 
+// Language Switcher Logic
+document.addEventListener("click", (e) => {
+  if (e.target.matches(".lang-btn")) {
+    const lang = e.target.getAttribute("data-lang");
+    import("./i18n/translations.js").then(({ setLang }) => {
+      setLang(lang);
+    });
+  }
+});
+
 document.addEventListener("click", (event) => {
   const scrollTopTrigger = event.target.closest("[data-scroll-top]");
   if (scrollTopTrigger) {

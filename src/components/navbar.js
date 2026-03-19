@@ -1,11 +1,12 @@
 import atGroupLogo from "../assets/images/AtGroupLogo.png";
+import { getLang, setLang, t } from "../i18n/translations.js";
 
 const navItems = [
-  { label: "Начало", href: "/home", homeHref: "/home#home-top" },
-  { label: "Основи", href: "/basics", homeHref: "/home#basics" },
-  { label: "Растеж", href: "/growth", homeHref: "/home#growth" },
-  { label: "Бъдеще", href: "/future", homeHref: "/home#future" },
-  { label: "Защо нас", href: "/home#why-us", homeHref: "/home#why-us" }
+  { label: "home", href: "/home", homeHref: "/home#home-top" },
+  { label: "basics", href: "/basics", homeHref: "/home#basics" },
+  { label: "growth", href: "/growth", homeHref: "/home#growth" },
+  { label: "future", href: "/future", homeHref: "/home#future" },
+  { label: "whyUs", href: "/home#why-us", homeHref: "/home#why-us" }
 ];
 
 export function renderNavbar(activePath) {
@@ -13,6 +14,8 @@ export function renderNavbar(activePath) {
   const navActivePath = ["/company-registration", "/vat-registration", "/payroll-hr", "/accounting", "/eu-projects", "/licenses"].includes(normalizedPath)
     ? "/basics"
     : normalizedPath;
+
+  const currentLang = getLang();
 
   const links = navItems
     .map(({ label, href, homeHref }) => {
@@ -27,7 +30,7 @@ export function renderNavbar(activePath) {
             data-home-section="${homeSection}"
             data-link
           >
-            ${label}
+            ${t(`nav.${label}`)}
           </a>
         </li>
       `;
@@ -56,8 +59,14 @@ export function renderNavbar(activePath) {
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-2 at-nav-list">
               <span class="nav-indicator" aria-hidden="true"></span>
               ${links}
-              <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-                <a class="btn at-cta" href="/contacts" data-open-contact-modal data-home-section="contacts">Контакт</a>
+              <li class="nav-item ms-lg-2 mt-2 mt-lg-0 d-flex align-items-center gap-3">
+                <a class="btn at-cta" href="/contacts" data-open-contact-modal data-home-section="contacts">${t("nav.contact")}</a>
+                <div class="lang-switcher">
+                  <button type="button" class="lang-btn ${currentLang === 'bg' ? 'active' : ''}" data-lang="bg">BG</button>
+                  <span class="lang-divider">|</span>
+                  <button type="button" class="lang-btn ${currentLang === 'en' ? 'active' : ''}" data-lang="en">EN</button>
+                </div>
+              </li>
               </li>
             </ul>
           </div>

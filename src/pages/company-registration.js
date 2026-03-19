@@ -1,46 +1,24 @@
 import { renderServiceDetailPage } from "../components/service-detail-page.js";
+import { t } from "../i18n/translations.js";
 
 export function companyRegistrationPage() {
   return renderServiceDetailPage({
     icon: "building",
-    title: "Регистрация на фирми",
-    description:
-      "Ние предоставяме пълно съдействие при регистрацията на всички видове търговски дружества в България. Нашият екип от експерти ще ви преведе през целия процес, гарантирайки спазването на всички законови изисквания.",
-    ctaTitle: "Готови ли сте да започнете?",
-    ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
+    title: t("services.companyRegistration.title"),
+    description: t("services.companyRegistration.description"),
+    ctaTitle: t("services.companyRegistration.ctaTitle"),
+    ctaText: t("services.companyRegistration.ctaText"),
     ctaHref: "/contacts",
-    ctaLabel: "Заявете Услуга",
+    ctaLabel: t("services.companyRegistration.ctaLabel"),
     backHref: "/home#basics",
-    backLabel: "Назад",
+    backLabel: t("services.companyRegistration.backLabel"),
     heroClass: "company-registration-hero",
     bodyClass: "company-registration-body",
     showBenefitsImage: true,
     showProcessImage: true,
-    benefitsTitle: "Ключови Предимства",
-    benefits: [
-      "Експертна консултация за избор на правна форма",
-      "Подготовка на целия пакет документи",
-      "Представителство пред Търговския регистър",
-      "Бърз и ефективен процес"
-    ],
-    processTitle: "Нашият Процес",
-    steps: [
-      {
-        title: "Консултация",
-        description: "Обсъждаме вашите бизнес цели и избираме подходящата правна форма."
-      },
-      {
-        title: "Подготовка на документи",
-        description: "Нашите юристи изготвят всички необходими документи."
-      },
-      {
-        title: "Подписване и нотариус",
-        description: "Организираме посещение при нотариус и откриване на набирателна сметка."
-      },
-      {
-        title: "Вписване",
-        description: "Подаваме документите в Търговския регистър."
-      }
-    ]
+    benefitsTitle: t("services.companyRegistration.benefitsTitle"),
+    benefits: t("services.companyRegistration.benefits"),
+    processTitle: t("services.companyRegistration.processTitle"),
+    steps: t("services.companyRegistration.steps")
   });
 }

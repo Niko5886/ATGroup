@@ -1,46 +1,24 @@
 import { renderServiceDetailPage } from "../components/service-detail-page.js";
+import { t } from "../i18n/translations.js";
 
 export function webDevelopmentPage() {
   return renderServiceDetailPage({
     icon: "code",
-    title: "Модерна Уеб Разработка",
-    description:
-      "Изработка на бързи, сигурни и отзивчиви уебсайтове, използващи най-новите технологии (React, Next.js).",
-    ctaTitle: "Готови ли сте да започнете?",
-    ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
+    title: t("services.webDevelopment.title"),
+    description: t("services.webDevelopment.description"),
+    ctaTitle: t("services.webDevelopment.ctaTitle"),
+    ctaText: t("services.webDevelopment.ctaText"),
     ctaHref: "/contacts",
-    ctaLabel: "Заявете Услуга",
+    ctaLabel: t("services.webDevelopment.ctaLabel"),
     backHref: "/home#growth",
-    backLabel: "Назад",
+    backLabel: t("services.webDevelopment.backLabel"),
     heroClass: "web-development-hero",
     bodyClass: "web-development-body",
     showBenefitsImage: true,
     showProcessImage: true,
-    benefitsTitle: "Ключови Предимства",
-    benefits: [
-      "Висока производителност и скорост",
-      "SEO оптимизирана структура",
-      "Мобилна съвместимост",
-      "Лесно управление на съдържанието"
-    ],
-    processTitle: "Нашият Процес",
-    steps: [
-      {
-        title: "Планиране",
-        description: "Структура на сайта и потребителски пътеки."
-      },
-      {
-        title: "Дизайн",
-        description: "UI/UX прототипиране."
-      },
-      {
-        title: "Разработка",
-        description: "Кодиране на функционалностите."
-      },
-      {
-        title: "Пускане",
-        description: "Тестване и качване на сървър."
-      }
-    ]
+    benefitsTitle: t("services.webDevelopment.benefitsTitle"),
+    benefits: t("services.webDevelopment.benefits"),
+    processTitle: t("services.webDevelopment.processTitle"),
+    steps: t("services.webDevelopment.steps")
   });
 }

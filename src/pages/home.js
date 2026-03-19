@@ -3,6 +3,7 @@ import { growthPage } from "./growth.js";
 import { futurePage } from "./future.js";
 import { audiencePage } from "./audience.js";
 import atGroupLogo from "../assets/images/AtGroupLogoHero.png";
+import { t } from "../i18n/translations.js";
 
 const homeSectionRenderers = {
   basics: basicsPage,
@@ -45,6 +46,10 @@ export function hydrateHomeSection(sectionId) {
 }
 
 export function homePage() {
+  const heroTitle = t("home.heroTitle");
+  const heroSubtitle = t("home.heroSubtitle");
+  const heroCtaMain = t("home.heroCtaMain");
+  
   return `
     <div class="home-stack">
       <section id="home-top" class="story-section story-section-hero is-visible">
@@ -52,12 +57,12 @@ export function homePage() {
           <div class="hero-brand-logo-wrap">
             <img src="${atGroupLogo}" alt="AT Group" class="hero-brand-logo" />
           </div>
-          <h1 class="hero-title">Изберете вашия <span>надежден партньор за цялостен бизнес успех!</span></h1>
+          <h1 class="hero-title">${heroTitle}</h1>
           <p class="hero-lead">
-            Обединяваме експертния опит на „ИНТЕЛЛЕКТ“ ЕООД в счетоводните и правни услуги с иновативните AI и дигитални решения на „НАЙМЕРИКС“ ЕООД. Осигуряваме стабилност и растеж за вашия бизнес в България и на международния пазар.
+            ${heroSubtitle}
           </p>
           <div class="hero-cta-corner">
-            <button class="btn hero-corner-btn" type="button" data-open-contact-modal>Започнете сега</button>
+            <button class="btn hero-corner-btn" type="button" data-open-contact-modal>${heroCtaMain}</button>
           </div>
         </section>
       </section>
@@ -70,9 +75,9 @@ export function homePage() {
       ${homeSectionShell("audience", "За кого")}
       <section id="why-us" class="story-section reveal-on-scroll why-us-section">
         <div class="why-us-card">
-          <h2 class="why-us-title">Защо да изберете партньорството между ИНТЕЛЛЕКТ и НАЙМЕРИКС?</h2>
+          <h2 class="why-us-title">${t("home.whyUsTitle")}</h2>
           <p class="why-us-text">
-            Повечето фирми трябва да координират отделно своите счетоводители, адвокати и ИТ специалисти. Ние работим в синхрон. Когато НАЙМЕРИКС ЕООД внедрява AI решение за вашия онлайн магазин, ИНТЕЛЛЕКТ ЕООД вече е проверил правната рамка и данъчното облагане. Спестяваме ви време, риск и излишни разходи.
+            ${t("home.whyUsText")}
           </p>
         </div>
       </section>

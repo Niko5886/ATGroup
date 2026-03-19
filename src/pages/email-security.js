@@ -1,46 +1,24 @@
 import { renderServiceDetailPage } from "../components/service-detail-page.js";
+import { t } from "../i18n/translations.js";
 
 export function emailSecurityPage() {
   return renderServiceDetailPage({
     icon: "shield",
-    title: "Сигурност на Имейли",
-    description:
-      "Защита на вашата бизнес комуникация от фишинг, спам и зловреден софтуер чрез модерни решения за сигурност.",
-    ctaTitle: "Готови ли сте да започнете?",
-    ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
+    title: t("services.emailSecurity.title"),
+    description: t("services.emailSecurity.description"),
+    ctaTitle: t("services.emailSecurity.ctaTitle"),
+    ctaText: t("services.emailSecurity.ctaText"),
     ctaHref: "/contacts",
-    ctaLabel: "Заявете Услуга",
+    ctaLabel: t("services.emailSecurity.ctaLabel"),
     backHref: "/home#future",
-    backLabel: "Назад",
+    backLabel: t("services.emailSecurity.backLabel"),
     heroClass: "email-security-hero",
     bodyClass: "email-security-body",
     showBenefitsImage: true,
     showProcessImage: true,
-    benefitsTitle: "Ключови Предимства",
-    benefits: [
-      "Блокиране на спам и вируси",
-      "Защита от BEC (Business Email Compromise)",
-      "Криптиране на чувствителни данни",
-      "24/7 мониторинг"
-    ],
-    processTitle: "Нашият Процес",
-    steps: [
-      {
-        title: "Аудит",
-        description: "Проверка на текущите настройки (SPF, DKIM, DMARC)."
-      },
-      {
-        title: "Внедряване",
-        description: "Инсталиране на филтриращи решения."
-      },
-      {
-        title: "Конфигурация",
-        description: "Настройка на правила за сигурност."
-      },
-      {
-        title: "Мониторинг",
-        description: "Постоянно следене на заплахите."
-      }
-    ]
+    benefitsTitle: t("services.emailSecurity.benefitsTitle"),
+    benefits: t("services.emailSecurity.benefits"),
+    processTitle: t("services.emailSecurity.processTitle"),
+    steps: t("services.emailSecurity.steps")
   });
 }

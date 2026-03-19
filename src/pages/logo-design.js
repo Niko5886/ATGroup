@@ -1,46 +1,24 @@
 import { renderServiceDetailPage } from "../components/service-detail-page.js";
+import { t } from "../i18n/translations.js";
 
 export function logoDesignPage() {
   return renderServiceDetailPage({
     icon: "sparkles",
-    title: "Лого Дизайн",
-    description:
-      "Професионален дизайн на лого, което капсулира същността на вашия бизнес в един запомнящ се символ.",
-    ctaTitle: "Готови ли сте да започнете?",
-    ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
+    title: t("services.logoDesign.title"),
+    description: t("services.logoDesign.description"),
+    ctaTitle: t("services.logoDesign.ctaTitle"),
+    ctaText: t("services.logoDesign.ctaText"),
     ctaHref: "/contacts",
-    ctaLabel: "Заявете Услуга",
+    ctaLabel: t("services.logoDesign.ctaLabel"),
     backHref: "/home#growth",
-    backLabel: "Назад",
+    backLabel: t("services.logoDesign.backLabel"),
     heroClass: "logo-design-hero",
     bodyClass: "logo-design-body",
     showBenefitsImage: true,
     showProcessImage: true,
-    benefitsTitle: "Ключови Предимства",
-    benefits: [
-      "Векторни файлове с високо качество",
-      "Различни варианти за всички медии",
-      "Пълни авторски права",
-      "Модерен и вечен дизайн"
-    ],
-    processTitle: "Нашият Процес",
-    steps: [
-      {
-        title: "Бриф",
-        description: "Изясняване на изискванията и стила."
-      },
-      {
-        title: "Концепции",
-        description: "Разработка на начални скици и идеи."
-      },
-      {
-        title: "Рафиниране",
-        description: "Усъвършенстване на избраната концепция."
-      },
-      {
-        title: "Предаване",
-        description: "Подготовка на финалните файлове."
-      }
-    ]
+    benefitsTitle: t("services.logoDesign.benefitsTitle"),
+    benefits: t("services.logoDesign.benefits"),
+    processTitle: t("services.logoDesign.processTitle"),
+    steps: t("services.logoDesign.steps")
   });
 }

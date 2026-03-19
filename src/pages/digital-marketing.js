@@ -1,46 +1,24 @@
 import { renderServiceDetailPage } from "../components/service-detail-page.js";
+import { t } from "../i18n/translations.js";
 
 export function digitalMarketingPage() {
   return renderServiceDetailPage({
     icon: "chartUp",
-    title: "Дигитален Маркетинг",
-    description:
-      "Комплексни стратегии за дигитален маркетинг, включващи SEO, социални мрежи и платена реклама за генериране на резултати.",
-    ctaTitle: "Готови ли сте да започнете?",
-    ctaText: "Свържете се с нас за безплатна консултация и персонализирана оферта.",
+    title: t("services.digitalMarketing.title"),
+    description: t("services.digitalMarketing.description"),
+    ctaTitle: t("services.digitalMarketing.ctaTitle"),
+    ctaText: t("services.digitalMarketing.ctaText"),
     ctaHref: "/contacts",
-    ctaLabel: "Заявете Услуга",
+    ctaLabel: t("services.digitalMarketing.ctaLabel"),
     backHref: "/home#growth",
-    backLabel: "Назад",
+    backLabel: t("services.digitalMarketing.backLabel"),
     heroClass: "digital-marketing-hero",
     bodyClass: "digital-marketing-body",
     showBenefitsImage: true,
     showProcessImage: true,
-    benefitsTitle: "Ключови Предимства",
-    benefits: [
-      "Увеличен трафик към сайта",
-      "По-висока конверсия",
-      "Измерими резултати и ROI",
-      "Таргетирано достигане до клиенти"
-    ],
-    processTitle: "Нашият Процес",
-    steps: [
-      {
-        title: "Аудит",
-        description: "Анализ на текущото присъствие."
-      },
-      {
-        title: "Стратегия",
-        description: "Избор на канали и тактики."
-      },
-      {
-        title: "Изпълнение",
-        description: "Стартиране на кампании и създаване на съдържание."
-      },
-      {
-        title: "Оптимизация",
-        description: "Мониторинг и подобряване на резултатите."
-      }
-    ]
+    benefitsTitle: t("services.digitalMarketing.benefitsTitle"),
+    benefits: t("services.digitalMarketing.benefits"),
+    processTitle: t("services.digitalMarketing.processTitle"),
+    steps: t("services.digitalMarketing.steps")
   });
 }

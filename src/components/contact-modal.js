@@ -1,3 +1,5 @@
+import { t } from "../i18n/translations.js";
+
 export function renderContactModal() {
   return `
     <div class="contact-modal" id="contactModal" data-contact-modal inert>
@@ -6,67 +8,67 @@ export function renderContactModal() {
           <span aria-hidden="true">\u00d7</span>
         </button>
 
-        <h2 class="contact-modal__title" id="contactModalTitle">Стартъп Пакети</h2>
-        <p class="contact-modal__subtitle">Попълнете формата, за да стартираме вашия бизнес с летящ старт.</p>
+        <h2 class="contact-modal__title" id="contactModalTitle">${t("contactModal.title")}</h2>
+        <p class="contact-modal__subtitle">${t("contactModal.subtitle")}</p>
 
         <form class="contact-modal__form">
           <div class="contact-modal__grid">
             <label class="contact-modal__field">
-              <span>Име *</span>
-              <input type="text" name="name" placeholder="Вашето име" required />
+              <span>${t("contactModal.name")} *</span>
+              <input type="text" name="name" placeholder="${t("contactModal.namePlaceholder")}" required />
             </label>
             <label class="contact-modal__field">
-              <span>Компания *</span>
-              <input type="text" name="company" placeholder="Име на фирмата" required />
+              <span>${t("contactModal.company")} *</span>
+              <input type="text" name="company" placeholder="${t("contactModal.companyPlaceholder")}" required />
             </label>
             <label class="contact-modal__field">
-              <span>Имейл *</span>
-              <input type="email" name="email" placeholder="name@company.com" required />
+              <span>${t("contactModal.email")} *</span>
+              <input type="email" name="email" placeholder="${t("contactModal.emailPlaceholder")}" required />
             </label>
             <label class="contact-modal__field">
-              <span>Телефон *</span>
-              <input type="tel" name="phone" placeholder="+359 888 123 456" inputmode="numeric" autocomplete="tel" pattern="^[+]?[0-9 ()-]{7,20}$" required />
+              <span>${t("contactModal.phone")} *</span>
+              <input type="tel" name="phone" placeholder="${t("contactModal.phonePlaceholder")}" inputmode="numeric" autocomplete="tel" pattern="^[+]?[0-9 ()-]{7,20}$" required />
             </label>
           </div>
 
           <label class="contact-modal__field contact-modal__field--full">
-            <span>Вид дейност *</span>
+            <span>${t("contactModal.activity")} *</span>
             <select name="activity" required>
-              <option value="" selected disabled>Изберете услуга...</option>
-              <option value="accounting">Счетоводни услуги</option>
-              <option value="technology">Технологични услуги</option>
-              <option value="marketing">Дигитален маркетинг</option>
+              <option value="" selected disabled>${t("contactModal.selectService")}</option>
+              <option value="accounting">${t("contactModal.accounting")}</option>
+              <option value="technology">${t("contactModal.technology")}</option>
+              <option value="marketing">${t("contactModal.marketing")}</option>
             </select>
           </label>
 
           <fieldset class="contact-modal__options" data-activity-group="accounting">
-            <legend>Счетоводни услуги *</legend>
-            <label><input type="checkbox" name="services" value="ДДС Регистрация" /> <span>ДДС Регистрация</span></label>
-            <label><input type="checkbox" name="services" value="Счетоводство" /> <span>Счетоводство</span></label>
-            <label><input type="checkbox" name="services" value="Регистрация на фирма" /> <span>Регистрация на фирма</span></label>
-            <label><input type="checkbox" name="services" value="ТРЗ и Личен Състав" /> <span>ТРЗ и Личен Състав</span></label>
+            <legend>${t("contactModal.accounting")} *</legend>
+            <label><input type="checkbox" name="services" value="ДДС Регистрация" /> <span>${t("contactModal.vatRegistration")}</span></label>
+            <label><input type="checkbox" name="services" value="Счетоводство" /> <span>${t("contactModal.accountingOpt")}</span></label>
+            <label><input type="checkbox" name="services" value="Регистрация на фирма" /> <span>${t("contactModal.companyRegistration")}</span></label>
+            <label><input type="checkbox" name="services" value="ТРЗ и Личен Състав" /> <span>${t("contactModal.payroll")}</span></label>
           </fieldset>
 
           <fieldset class="contact-modal__options" data-activity-group="technology">
-            <legend>Технологични услуги *</legend>
-            <label><input type="checkbox" name="tech-services" value="Автоматизация на бизнес процеси" /> <span>Автоматизация на бизнес процеси</span></label>
-            <label><input type="checkbox" name="tech-services" value="М365 консултации" /> <span>М365 консултации</span></label>
-            <label><input type="checkbox" name="tech-services" value="Имейл сигурност" /> <span>Имейл сигурност</span></label>
+            <legend>${t("contactModal.technology")} *</legend>
+            <label><input type="checkbox" name="tech-services" value="Автоматизация на бизнес процеси" /> <span>${t("contactModal.processAutomation")}</span></label>
+            <label><input type="checkbox" name="tech-services" value="М365 консултации" /> <span>${t("contactModal.m365consult")}</span></label>
+            <label><input type="checkbox" name="tech-services" value="Имейл сигурност" /> <span>${t("contactModal.emailSecurity")}</span></label>
           </fieldset>
 
           <fieldset class="contact-modal__options" data-activity-group="marketing">
-            <legend>Дигитален маркетинг *</legend>
-            <label><input type="checkbox" name="digital-services" value="Дигитален маркетинг" /> <span>Дигитален маркетинг</span></label>
-            <label><input type="checkbox" name="digital-services" value="Бранд идентификация" /> <span>Бранд идентификация</span></label>
-            <label><input type="checkbox" name="digital-services" value="Графичен дизайн" /> <span>Графичен дизайн</span></label>
+            <legend>${t("contactModal.marketing")} *</legend>
+            <label><input type="checkbox" name="digital-services" value="Дигитален маркетинг" /> <span>${t("contactModal.marketingOpt")}</span></label>
+            <label><input type="checkbox" name="digital-services" value="Бранд идентификация" /> <span>${t("contactModal.brandIdentity")}</span></label>
+            <label><input type="checkbox" name="digital-services" value="Графичен дизайн" /> <span>${t("contactModal.graphicDesign")}</span></label>
           </fieldset>
 
           <label class="contact-modal__field contact-modal__field--full">
-            <span>Допълнителни бележки</span>
-            <textarea name="notes" rows="3" placeholder="Разкажете ни повече за вашите нужди."></textarea>
+            <span>${t("contactModal.notes")}</span>
+            <textarea name="notes" rows="3" placeholder="${t("contactModal.notesPlaceholder")}"></textarea>
           </label>
 
-          <button class="contact-modal__submit" type="submit">Изпрати запитване</button>
+          <button class="contact-modal__submit" type="submit">${t("contactModal.submit")}</button>
         </form>
       </div>
     </div>
