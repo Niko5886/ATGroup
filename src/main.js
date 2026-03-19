@@ -580,6 +580,59 @@ document.addEventListener("submit", (event) => {
     return;
   }
 
+  const formData = new FormData(form);
+  const activity = formData.get("activity");
+  const name = formData.get("name");
+  const company = formData.get("company");
+  const email = formData.get("email");
+  const phone = formData.get("phone");
+  const notes = formData.get("notes") || "-";
+
+  let recipientEmail = "";
+  let subject = "";
+  let bodyServices = "";
+
+  if (activity === "marketing") {
+    recipientEmail = "nymerix.ltd@gmail.com";
+    subject = `Запитване: Дигитален Маркетинг - ${company}`;
+    const services = formData.getAll("digital-services");
+    bodyServices = services.join(", ");
+  } else if (activity === "technology") {
+    recipientEmail = "nymerix.ltd@gmail.com";
+    subject = `Запитване: Технологични Услуги - ${company}`;
+    const services = formData.getAll("tech-services");
+    bodyServices = services.join(", ");
+  } else if (activity === "accounting") {
+    // Empty placeholder email as requested for accounting
+    recipientEmail = ""; 
+    subject = `Запитване: Счетоводни Услуги - ${company}`;
+    const services = formData.getAll("services");
+    bodyServices = services.join(", ");
+  }
+
+  // Construct email body
+  const body = `
+Ново запитване от ${name} (${company})
+
+Телефон: ${phone}
+Имейл: ${email}
+Категория: ${activity === "marketing" ? "Дигитален Маркетинг" : activity === "technology" ? "Технологични Услуги" : "Счетоводни Услуги"}
+
+Избрани услуги:
+${bodyServices}
+
+Бележки:
+${notes}
+  `.trim();
+
+  if (recipientEmail) {
+    // Open default mail client with pre-filled check
+    window.location.href = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  } else {
+    console.log("Запитване за счетоводство (няма конфигуриран имейл):", { name, company, email, phone, services: bodyServices, notes });
+    alert("Благодарим Ви! Вашето запитване за счетоводни услуги беше прието успешно.");
+  }
+
   // UI-only modal form for now: keep user on page after submit click.
   closeContactModal();
 });
