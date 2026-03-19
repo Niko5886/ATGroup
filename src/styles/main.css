@@ -381,6 +381,35 @@ a {
   z-index: 2;
 }
 
+.hero-cta-corner {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.55rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-corner-btn {
+  background: linear-gradient(120deg, #2f8b66, #2b6f52);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(47, 107, 79, 0.28);
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  padding: 0.78rem 2.05rem;
+  transition: transform 0.18s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.hero-corner-btn:hover,
+.hero-corner-btn:focus {
+  background: linear-gradient(120deg, #2d7d5d, #245f46);
+  box-shadow: 0 10px 22px rgba(47, 107, 79, 0.34);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -4751,6 +4780,15 @@ body.modal-open {
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .hero-cta-corner {
+    justify-content: center;
+  }
+
+  .hero-corner-btn {
+    width: 100%;
+    max-width: 20rem;
   }
 
   .hero-btn-main,

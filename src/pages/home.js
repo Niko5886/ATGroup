@@ -56,6 +56,9 @@ export function homePage() {
           <p class="hero-lead">
             Обединяваме експертния опит на „ИНТЕЛЛЕКТ“ ЕООД в счетоводните и правни услуги с иновативните AI и дигитални решения на „НАЙМЕРИКС“ ЕООД. Осигуряваме стабилност и растеж за вашия бизнес в България и на международния пазар.
           </p>
+          <div class="hero-cta-corner">
+            <button class="btn hero-corner-btn" type="button" data-open-contact-modal>Започнете сега</button>
+          </div>
         </section>
       </section>
 
