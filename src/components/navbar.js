@@ -1,3 +1,5 @@
+import atGroupLogo from "../assets/images/AtGroupLogo.png";
+
 const navItems = [
   { label: "Начало", href: "/home", homeHref: "/home#home-top" },
   { label: "Основи", href: "/basics", homeHref: "/home#basics" },
@@ -36,7 +38,7 @@ export function renderNavbar(activePath) {
       <nav class="navbar navbar-expand-lg at-navbar">
         <div class="container-fluid px-0">
           <a class="navbar-brand at-brand" href="/home" data-link>
-            <span>AT Group</span>
+            <img src="${atGroupLogo}" alt="AT Group" class="at-brand-logo" />
           </a>
           <button
             class="navbar-toggler"

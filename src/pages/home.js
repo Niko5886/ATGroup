@@ -2,6 +2,7 @@ import { basicsPage } from "./basics.js";
 import { growthPage } from "./growth.js";
 import { futurePage } from "./future.js";
 import { audiencePage } from "./audience.js";
+import atGroupLogo from "../assets/images/AtGroupLogoHero.png";
 
 const homeSectionRenderers = {
   basics: basicsPage,
@@ -48,7 +49,9 @@ export function homePage() {
     <div class="home-stack">
       <section id="home-top" class="story-section story-section-hero is-visible">
         <section class="hero-block">
-          <p class="eyebrow">AT GROUP</p>
+          <div class="hero-brand-logo-wrap">
+            <img src="${atGroupLogo}" alt="AT Group" class="hero-brand-logo" />
+          </div>
           <h1 class="hero-title">Изберете вашия <span>надежден партньор за цялостен бизнес успех!</span></h1>
           <p class="hero-lead">
             Обединяваме експертния опит на „ИНТЕЛЛЕКТ“ ЕООД в счетоводните и правни услуги с иновативните AI и дигитални решения на „НАЙМЕРИКС“ ЕООД. Осигуряваме стабилност и растеж за вашия бизнес в България и на международния пазар.
