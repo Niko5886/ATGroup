@@ -22,8 +22,8 @@ export function renderFooter() {
         <div class="footer-col">
           <h4 class="footer-title">Контакти</h4>
           <ul class="footer-contact">
-            <li>info@intellectnymerix.bg</li>
-            <li>+359 123 456 789</li>
+            <li>nymerix.ltd@gmail.com</li>
+            <li>+359 988 855 911</li>
             <li>Русе, България</li>
           </ul>
         </div>
