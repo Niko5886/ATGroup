@@ -2128,7 +2128,9 @@ a {
   font-weight: 800;
   line-height: 1.04;
   margin: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .service-detail-description {
@@ -2137,7 +2139,9 @@ a {
   line-height: 1.7;
   margin: 1.5rem 0 0;
   max-width: 42rem;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .service-detail-cta {
@@ -4405,14 +4409,18 @@ a {
   font-size: 1.45rem;
   font-weight: 800;
   margin: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .detail-step-copy p {
   color: #5a6d62;
   line-height: 1.6;
   margin: 0.45rem 0 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .detail-step-copy {
@@ -5089,7 +5097,9 @@ body.modal-open {
 }
 
 .contact-modal__options label span {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 /* Dynamic viewport-safe modal height */
