@@ -64,8 +64,15 @@ body.benefit-effect-accented .detail-benefit-check::before {
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
   font-family: "Montserrat", sans-serif;
   color: var(--text-main);
   background:
@@ -4678,7 +4685,7 @@ body.modal-open {
 
   .contact-modal__grid,
   .contact-modal__options {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -4730,7 +4737,7 @@ body.modal-open {
 @media (max-width: 767.98px) {
   .footer-grid {
     gap: 1.5rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -4812,7 +4819,7 @@ body.modal-open {
   }
 
   .service-detail-hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -4820,7 +4827,7 @@ body.modal-open {
   .service-detail-body[class],
   .service-detail-hero[class],
   [class*="-body"] {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 
   .site-header {
@@ -4889,7 +4896,7 @@ body.modal-open {
   .service-grid-4,
   .audience-grid,
   .service-detail-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .home-stack {
@@ -5075,7 +5082,7 @@ body.modal-open {
 @media (max-width: 575.98px) {
   .service-grid-3,
   .service-grid-4 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .service-detail-hero {
