@@ -466,7 +466,7 @@ export const translations = {
       rights: "© 2026 Intellect & Nymerix | All rights reserved."
     },
     home: {
-      heroTitle: "Choose Your Reliable Partner for Holistic Business Success!",
+      heroTitle: "Choose Your Reliable Partner for Holistic Business Success",
       heroSubtitle: "We combine the expert experience of INTELLECT LTD in accounting and legal services with the innovative AI and digital solutions of NYMERIX LTD. We ensure stability and growth for your business in Bulgaria and on the international market.",
       heroCtaMain: "Start Now",
       heroCtaAlt: "Learn More",
