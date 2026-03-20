@@ -4817,6 +4817,12 @@ body.modal-open {
 }
 
 @media (max-width: 991.98px) {
+  .service-detail-body[class],
+  .service-detail-hero[class],
+  [class*="-body"] {
+    grid-template-columns: 1fr !important;
+  }
+
   .site-header {
     border-radius: 1rem;
     position: fixed;
