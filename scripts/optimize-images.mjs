@@ -58,13 +58,24 @@ async function optimizeFile(filePath) {
     };
   }
 
-  await fs.writeFile(filePath, optimizedBuffer);
-
-  return {
-    changed: true,
-    before: originalBuffer.length,
-    after: optimizedBuffer.length
-  };
+  try {
+    await fs.writeFile(filePath, optimizedBuffer);
+    return {
+      changed: true,
+      before: originalBuffer.length,
+      after: optimizedBuffer.length
+    };
+  } catch (error) {
+    if (error.code === 'EPERM' || error.code === 'EBUSY') {
+      console.warn(`\x1b[33m\n[Внимание] Неуспешен запис на ${path.basename(filePath)}. Файлът е заключен или само за четене. Пропускане...\x1b[0m`);
+      return {
+        changed: false,
+        before: originalBuffer.length,
+        after: originalBuffer.length
+      };
+    }
+    throw error;
+  }
 }
 
 function formatKB(bytes) {
