@@ -1,4 +1,4 @@
-import atGroupLogo from "../assets/images/AtGroupLogo.png";
+import atGroupLogo from "../assets/images/AtGroupLogoHero.png";
 import { getLang, setLang, t } from "../i18n/translations.js";
 
 const navItems = [
