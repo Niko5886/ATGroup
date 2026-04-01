@@ -1350,6 +1350,13 @@ a {
   overflow: hidden;
 }
 
+@media (min-width: 992px) {
+  .service-card-process-automation {
+    min-height: 30rem;
+    overflow: visible;
+  }
+}
+
 .service-card-process-automation::before {
   background:
     radial-gradient(circle at 18% 10%, rgba(239, 248, 243, 0.18), transparent 34%),
