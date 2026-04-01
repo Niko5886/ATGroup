@@ -1383,6 +1383,7 @@ a {
 .service-card-process-automation h3 {
   color: #ffffff;
   text-shadow: 0 2px 10px rgba(8, 19, 14, 0.28);
+  word-break: break-word;
 }
 
 .service-card-process-automation p {
