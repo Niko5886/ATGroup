@@ -8,26 +8,25 @@ export function renderContactModal() {
           <span aria-hidden="true">\u00d7</span>
         </button>
 
-        <h2 class="contact-modal__title" id="contactModalTitle">${t("contactModal.title")}</h2>
         <p class="contact-modal__subtitle">${t("contactModal.subtitle")}</p>
 
         <form class="contact-modal__form">
           <div class="contact-modal__grid">
             <label class="contact-modal__field">
               <span>${t("contactModal.name")} *</span>
-              <input type="text" name="name" placeholder="${t("contactModal.namePlaceholder")}" required />
+              <input type="text" name="name" placeholder="${t("contactModal.namePlaceholder")}" minlength="2" maxlength="50" pattern="^[A-Za-z\u0400-\u04FF]+(?:[ .'-][A-Za-z\u0400-\u04FF]+)*$" title="Името трябва да е между 2 и 50 символа и може да съдържа само букви (кирилица/латиница), интервали, тирета, апострофи и точки." required />
             </label>
             <label class="contact-modal__field">
               <span>${t("contactModal.company")} *</span>
-              <input type="text" name="company" placeholder="${t("contactModal.companyPlaceholder")}" required />
+              <input type="text" name="company" placeholder="${t("contactModal.companyPlaceholder")}" minlength="2" maxlength="50" pattern="^[A-Za-z\u0400-\u04FF0-9\s\-\.'\"„“”]+$" title="Компанията трябва да е между 2 и 50 символа и може да съдържа букви (кирилица/латиница), цифри, интервали, кавички, точки и тирета." required />
             </label>
             <label class="contact-modal__field">
               <span>${t("contactModal.email")} *</span>
-              <input type="email" name="email" placeholder="${t("contactModal.emailPlaceholder")}" required />
+              <input type="email" name="email" placeholder="${t("contactModal.emailPlaceholder")}" minlength="2" maxlength="50" required />
             </label>
             <label class="contact-modal__field">
               <span>${t("contactModal.phone")} *</span>
-              <input type="tel" name="phone" placeholder="${t("contactModal.phonePlaceholder")}" inputmode="numeric" autocomplete="tel" pattern="^[+]?[0-9 ()-]{7,20}$" required />
+              <input type="tel" name="phone" placeholder="${t("contactModal.phonePlaceholder")}" inputmode="numeric" autocomplete="tel" pattern="^(?=(?:\D*\d){1,20}\D*$)\+?[0-9 ()-]*$" title="Телефонът може да съдържа до 20 цифри и символите +, интервали, скоби и тирета." required />
             </label>
           </div>
 

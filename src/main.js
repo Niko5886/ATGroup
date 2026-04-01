@@ -146,9 +146,35 @@ function sanitizePhoneValue(rawValue) {
 
   // Keep at most one plus sign and only at the beginning.
   sanitized = sanitized.replace(/\+/g, "");
-  if (startsWithPlus) {
-    sanitized = `+${sanitized}`;
+
+  let digitCount = 0;
+  let limitedValue = "";
+
+  for (const char of sanitized) {
+    if (/\d/.test(char)) {
+      if (digitCount >= 20) {
+        continue;
+      }
+      digitCount += 1;
+    }
+
+    limitedValue += char;
   }
+
+  if (startsWithPlus) {
+    limitedValue = `+${limitedValue}`;
+  }
+
+  return limitedValue;
+}
+
+function sanitizeNameValue(rawValue) {
+  if (!rawValue) {
+    return "";
+  }
+
+  let sanitized = rawValue.replace(/[^A-Za-z\u0400-\u04FF\s\-'.]/g, "");
+  sanitized = sanitized.replace(/\s{2,}/g, " ");
 
   return sanitized;
 }
@@ -667,6 +693,15 @@ document.addEventListener("change", (event) => {
 });
 
 document.addEventListener("input", (event) => {
+  const nameInput = event.target.closest(".contact-modal__form input[name='name']");
+  if (nameInput) {
+    const sanitizedName = sanitizeNameValue(nameInput.value);
+    if (sanitizedName !== nameInput.value) {
+      nameInput.value = sanitizedName;
+    }
+    return;
+  }
+
   const phoneInput = event.target.closest(".contact-modal__form input[name='phone']");
   if (!phoneInput) {
     return;
