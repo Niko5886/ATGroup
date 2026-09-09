@@ -11,7 +11,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Live%20%E2%86%92-at--group.bg%20(soon)-c9a96a?style=for-the-badge&labelColor=2f6b4f" height="34" alt="Live — at-group.bg (coming soon)" />
+  <a href="https://nik-atgroup.netlify.app/home#home-top">
+    <img src="https://img.shields.io/badge/%F0%9F%8C%90%20Live%20Site%20%E2%86%92-nik--atgroup.netlify.app-c9a96a?style=for-the-badge&labelColor=2f6b4f" height="34" alt="Live Site — nik-atgroup.netlify.app" />
+  </a>
 </p>
 
 <p align="center">
@@ -19,7 +21,7 @@
   <img src="https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white" alt="Vite 5" />
   <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white" alt="Bootstrap 5.3" />
   <img src="https://img.shields.io/badge/i18n-BG%20%7C%20EN-2f6b4f" alt="Bilingual BG | EN" />
-  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white" alt="Deployed on Vercel" />
+  <img src="https://img.shields.io/badge/Deploy-Netlify-00C7B7?logo=netlify&logoColor=white" alt="Deployed on Netlify" />
 </p>
 
 <p align="center">
@@ -141,14 +143,14 @@ vite.config.js             # Vite configuration
 
 ## ☁️ Deployment
 
-Deployed on **Vercel** as a static SPA. [`vercel.json`](vercel.json) rewrites every request
-to `index.html` so the client-side router can resolve deep links:
+Live on **Netlify** → **[nik-atgroup.netlify.app](https://nik-atgroup.netlify.app/home#home-top)**.
+Both hosts are configured to serve the SPA by rewriting every request to `index.html`, so the
+client-side router can resolve deep links:
 
-```json
-{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
-```
+- **Netlify** — [`public/_redirects`](public/_redirects): `/*  /index.html  200`
+- **Vercel** (alternative) — [`vercel.json`](vercel.json): `{ "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }`
 
-Production domain **at-group.bg** is being provisioned — link goes live once DNS is pointed.
+A custom production domain (**at-group.bg**) can be attached in Netlify once DNS is pointed.
 
 ## 👤 Author & partnership
 
